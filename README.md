@@ -2,6 +2,8 @@
 VuFind®
 =======
 
+Initiating CRL Fork...
+
 Introduction
 ------------
 VuFind® is an open source discovery environment for searching a collection of
