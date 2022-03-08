@@ -19,3 +19,8 @@ lessphp_*.list
 module/VuFind/tests/.phpunit.result.cache
 node_modules
 public/swagger-ui
+
+# The following are private and/or instance-specific
+local/harvest/
+local/config/vufind/config.ini
+local/config/vufind/Folio.ini
