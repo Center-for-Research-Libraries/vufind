@@ -24,3 +24,5 @@ public/swagger-ui
 local/harvest/
 local/config/vufind/config.ini
 local/config/vufind/Folio.ini
+local/httpd-vufind.conf
+env.bat
