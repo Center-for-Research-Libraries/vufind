@@ -337,6 +337,7 @@ AllFields:
     - isbn
     - issn
     - long_lat_display
+    - oclc_num
   DismaxHandler: edismax
 #  ExactSettings:
 #    DismaxFields:
@@ -483,9 +484,20 @@ oclc_num:
   QueryFields:
     oclc_num:
       - [oclc_num, ~]
+# oclc def above has custom handling that seems to break wildcard
+# searches, but only if oclc-specific search is selected (all field searches
+# still work with wildcard on partical oclc). Perhaps that's due to CustomMunge?
+# If so, an alternative  treatment like the following would mimic other standard
+# fields (like author, ISN, etc.). The tradeoffs need more exploration though as
+# the def above may be more condusive to special needs.
+#oclc_num:
+#  DismaxFields:
+#    - oclc_num
+#  DismaxHandler: edismax
 
 WorkKeys:
   QueryFields:
     work_keys_str_mv:
       - [and, 100]
       - [or, ~]
+
