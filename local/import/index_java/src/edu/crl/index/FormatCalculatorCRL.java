@@ -54,7 +54,17 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
             }
         }
          */
-
+        
+        // Check 006 for format
+        ControlField marc006 = (ControlField) record.getVariableField("006");
+        if (marc006 != null) {
+          char format006 = marc006.getData().toLowerCase().charAt(6);
+          if (format006 == 'o' || format006 == 'q') {
+            return true;
+          }
+        }
+        
+        // Legacy check 245
         DataField title = (DataField) record.getVariableField("245");
         if (title != null) {
             if (title.getSubfield('h') != null) {
