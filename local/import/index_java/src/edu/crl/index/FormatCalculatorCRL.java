@@ -59,7 +59,7 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         ControlField marc006 = (ControlField) record.getVariableField("006");
         if (marc006 != null) {
           char format006 = marc006.getData().toLowerCase().charAt(6);
-          if (format006 == 'o' || format006 == 'q') {
+          if (format006 == 'o' || format006 == 'q' || format006 == 's') {
             return true;
           }
         }
