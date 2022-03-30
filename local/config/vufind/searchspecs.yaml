@@ -313,6 +313,7 @@ Series:
     - series2
   DismaxHandler: edismax
 
+# CRL
 AllFields:
   DismaxFields:
     - title_short^750
@@ -484,6 +485,7 @@ oclc_num:
   QueryFields:
     oclc_num:
       - [oclc_num, ~]
+# CRL
 # oclc def above has custom handling that seems to break wildcard
 # searches, but only if oclc-specific search is selected (all field searches
 # still work with wildcard on partical oclc). Perhaps that's due to CustomMunge?
@@ -500,4 +502,3 @@ WorkKeys:
     work_keys_str_mv:
       - [and, 100]
       - [or, ~]
-
