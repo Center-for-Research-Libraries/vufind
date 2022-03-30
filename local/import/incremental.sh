@@ -18,29 +18,35 @@ set -e
 today="$(date +'%d%m%Y')"
 printf "Record update started: %s\n" "$today"
 
-echo "\n\nImporting MARC records..."
+echo
+echo "Importing MARC records..."
 php "$VUFIND_HOME"/harvest/harvest_oai.php
 "$VUFIND_HOME"/harvest/batch-delete.sh crl
 "$VUFIND_HOME"/harvest/batch-import-marc.sh crl
 
 # optimize index
-echo "\n\nOptimizing index..."
+echo
+echo "Optimizing index..."
 php "$VUFIND_HOME"/util/optimize.php
 
 # wait for solr to start
-echo "\n\nRestarting solr index (sudo password may be required)..."
+echo
+echo "Restarting solr index (sudo password may be required)..."
 su - "$VUFIND_SOLR_USER" -c '"$VUFIND_HOME"/solr.sh stop'
 "$VUFIND_HOME"/solr.sh restart
 
 # create browse index
-echo "\n\nCreating browse index..."
+echo
+echo "Creating browse index..."
 "$VUFIND_HOME"/index-alphabetic-browse.sh
 
 # remove caches
-echo "\n\nRemoving caches..."
+echo
+echo "Removing caches..."
 rm -R "$VUFIND_HOME"/local/cache/searchspecs/*
 rm -R "$VUFIND_HOME"/local/cache/objects/*
 
-echo "\n\nFinished"
+echo
+echo "Finished"
 echo "####################################"
 exit 0 
