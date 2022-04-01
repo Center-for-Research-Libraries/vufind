@@ -34,41 +34,53 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
 {
 
     /**
-     * Determine whether a record is electronic in format.
+     * Determine whether a record is a government document.
      *
      * @param Record record
      * @return boolean
      */
-    protected boolean isElectronic(Record record) {
-        /* Example from Villanova of how to use holdings locations to detect online status;
-         * You can override this method in a subclass if you wish to use this approach.
-        List holdingsFields = record.getVariableFields("852");
-        Iterator holdingsIterator = holdingsFields.iterator();
-        while (holdingsIterator.hasNext()) {
-            DataField holdingsField = (DataField) holdingsIterator.next();
-            if (holdingsField.getSubfield('b') != null) {
-                String holdingsLocation = holdingsField.getSubfield('b').getData().toLowerCase();
-                if (holdingsLocation.equals("www") || holdingsLocation.equals("e-ref")) {
-                    return true;
-                }
-            }
-        }
-         */
-
-        // Check 006 for format
-        ControlField marc006 = (ControlField) record.getVariableField("006");
-        if (marc006 != null) {
-          char format006 = marc006.getData().toLowerCase().charAt(6);
-          if (format006 == 'o' || format006 == 'q' || format006 == 's') {
-            return true;
+    protected boolean isGovernmentDocument(Record record) {
+        // Check both the results of parent method and the 008/28
+        boolean ResultMarc008 = false;
+        ControlField marc008 = (ControlField) record.getVariableField("008");
+        if (marc008 != null) {
+          char marc00828 = marc008.getData().toLowerCase().charAt(28);
+          if (marc00828 != ' ' && marc00828 != 'u') {
+            ResultMarc008 = true;
           }
         }
+        return (super.isGovernmentDocument(record) || ResultMarc008);
+    }
 
-        // Legacy check 245
-        DataField title = (DataField) record.getVariableField("245");
-        if (title != null) {
-            if (title.getSubfield('h') != null) {
-                if (title.getSubfield('h').getData().toLowerCase().contains("[electronic resource]")) {
+    /**
+     * Determine whether a record is a conference proceeding.
+     *
+     * @param Record record
+     * @return boolean
+     */
+    protected boolean isConferenceProceeding(Record record) {
+        // Check both the results of parent method and the 008/29
+        boolean ResultMarc008 = false;
+        ControlField marc008 = (ControlField) record.getVariableField("008");
+        if (marc008 != null) {
+          if (marc008.getData().toLowerCase().charAt(29) == '1') {
+            ResultMarc008 = true;
+          }
+        }
+        return (super.isConferenceProceeding(record) || ResultMarc008);
+    }
+
+    /**
+     * Determine whether a record is a CRL Dissertation.
+     *
+     * @param Record record
+     * @return boolean
+     */
+    protected boolean isDissertation(Record record) {
+        DataField callNum = (DataField) record.getVariableField("099");
+        if (callNum != null) {
+            if (callNum.getSubfield('a') != null) {
+                if (callNum.getSubfield('a').getData().contains("P-")) {
                     return true;
                 }
             }
@@ -76,6 +88,54 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         return false;
     }
 
+    /**
+     * Return the best format string based on bib level in leader; return
+     * blank string for ambiguous/irrelevant results.
+     *
+     * @param Record record
+     * @param char bibLevel
+     * @param char formatCode
+     * @param ControlField marc008
+     * @param boolean couldBeBook
+     * @return String
+     */
+    protected String getFormatFromBibLevel(Record record, char bibLevel, char formatCode, ControlField marc008, boolean couldBeBook) {
+        switch (bibLevel) {
+            // Monograph
+            case 'm':
+                if (couldBeBook) {
+                    return (formatCode == 'c') ? "eBook" : "Book";
+                }
+                break;
+            // Component parts
+            case 'a':
+                return "BookComponentPart";
+            case 'b':
+                return "SerialComponentPart";
+            // Integrating resources (e.g. loose-leaf binders, databases)
+            case 'i':
+                return (formatCode == 'c')
+                    ? "OnlineIntegratingResource" : "PhysicalIntegratingResource";
+            // Serial
+            case 's':
+                // Look in 008 to determine what type of Continuing Resource
+                if (marc008 != null) {
+                    // General Newspapers
+                    if (marc008.getData().toLowerCase().charAt(21) == 'n') {
+                      return "Newspaper";
+                    }
+                    // Catch publications that start as a newspaper and
+                    // later switch formats.
+                    if (marc008.getData().toLowerCase().charAt(22) == 'e') {
+                      return ("Newspaper");
+                    }
+                    // Else are serials.
+                    return "Serial";
+                }
+                break;
+        }
+        return "";
+    }
 
     /**
      * Determine Record Format(s)
@@ -103,6 +163,10 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         if (isElectronic(record)) {
             result.add("Electronic");
         }
+        // Custom CRL check for dissertation.
+        if (isDissertation(record)) {
+          result.add("Dissertation");
+        }
         if (isConferenceProceeding(record)) {
             result.add("ConferenceProceeding");
         }
@@ -126,7 +190,10 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
                     result.add("Video");
                 }
                 String formatFrom007 = getFormatFrom007(formatCode, formatString);
-                if (formatFrom007.length() > 0) {
+                // Note VuFind tries to get Microfilm type from 007, but at CRL
+                // we use our own separate 008 check for this, so be sure to
+                // ignore 007 "Microfilm" result here.
+                if (formatFrom007.length() > 0 && formatFrom007 != "Microfilm") {
                     result.add(formatFrom007);
                 }
             }
@@ -151,33 +218,25 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
             result.add(formatFromBibLevel);
         }
 
-
-        /////// PLAY LOGIC HERE FOR TESTING ///////////
-
-        // Sub-versions of digital/electronic
-        ControlField marc006 = (ControlField) record.getVariableField("006");
-        if (marc006 != null) {
-          char format006 = marc006.getData().toLowerCase().charAt(6);
-          if (format006 == 'o') {
-            result.add("DigitalO");
-          }
-          if (format006 == 'q') {
-            result.add("DigitalQ");
-          }
-          if (format006 == 's') {
-            result.add("DigitalS");
+        // Catch special CRL cases that are based off of 008 data and are not
+        // mutually exclusive with logic in standard FormatCalculator.java
+        if (marc008 != null) {
+          // Flag "Online" material as well as various types of film
+          switch (marc008.getData().toLowerCase().charAt(23)) {
+            case 'o':
+              result.add("Online");
+              break;
+            case 'a':
+              result.add("Microfilm");
+              break;
+            case 'b':
+              result.add("Microfiche");
+              break;
+            case 'c':
+              result.add("Microopaque");
+              break;
           }
         }
-        // Theseis lookup based on location code
-        DataField callNum = (DataField) record.getVariableField("099");
-        if (callNum != null) {
-            if (callNum.getSubfield('a') != null) {
-                if (callNum.getSubfield('a').getData().contains("P-")) {
-                    result.add("DissertationP");
-                }
-            }
-        }
-
 
         // Nothing worked -- time to set up a value of last resort!
         if (result.isEmpty()) {
