@@ -1,0 +1,45 @@
+
+// Variable Overrides.
+//
+// Modify this file to override the Bootstrap Framework variables. You can copy
+// these variables directly from ../bootstrap/less/variables.less to this file.
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+@icon-font-path: '../bootstrap/fonts/';
+
+
+/////// CRL-Added Variables ///////
+@crl-gray: #e3e3e3;
+
+@font-size-base: 16px;
+
+// Media query variables. These may have later get defined in an overrides
+// file, but we need to also make them available for stand-alone less files that
+// only include our variables files on compilation and not the whole
+// Bootstrap/Drupal theme LESS.
+@mobile-only:         ~"screen and (max-width: @{screen-sm-min})"; // < 768
+@tablet:              ~"screen and (min-width: @{screen-sm-min})"; // 768+
+@tablet-only:         ~"screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-md-min})"; // 768+
+@normal:              ~"screen and (min-width: @{screen-md-min})"; // 992+
+@wide:                ~"screen and (min-width: @{screen-lg-min})"; // 1200+
+@grid-breakpoint:     ~"screen and (min-width: @{grid-float-breakpoint})";
+
+// Add some sub-theme vars.
+@big-gap:    25px;
+@normal-gap: @padding-base-horizontal; // ~12-15px
+@small-gap: @padding-xs-horizontal; // ~3-5px
+
+// Colors from main branding palette (and shading derivatives).
+
+// CRL Brand Colors
+@brand-primary: #00102b;
+@white: #ffffff;
+
+// CRL Brand Colors
+@crl-blue: #002056;
+@crl-blue-lighten: #004884;
+@crl-blue-darken: darken(@crl-blue, 5%);
+@crl-dark-blue: #00102b;
+
+// Box shadow.
+@crl-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

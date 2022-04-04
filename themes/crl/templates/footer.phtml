@@ -1,0 +1,58 @@
+<footer class="hidden-print">
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-column">
+        <?php $this->slot('footer-left')->start(); ?>
+        <h2><?=$this->transEsc('Search Options')?></h2>
+        <ul>
+          <li><a href="<?=$this->url('search-history')?>"><?=$this->transEsc('Search History')?></a></li>
+          <li><a href="<?=$this->url('search-advanced')?>"><?=$this->transEsc('Advanced Search')?></a></li>
+        </ul>
+        <?=$this->slot('footer-left')->end(); ?>
+      </div>
+      <div class="footer-column">
+        <?php $this->slot('footer-center')->start(); ?>
+        <h2><?=$this->transEsc('Find More')?></h2>
+        <ul>
+          <li><a href="<?=$this->url('browse-home')?>"><?=$this->transEsc('Browse the Catalog')?></a></li>
+          <li><a href="<?=$this->url('alphabrowse-home')?>"><?=$this->transEsc('Browse Alphabetically')?></a></li>
+          <li><a href="<?=$this->url('channels-home')?>"><?=$this->transEsc('channel_explore')?></a></li>
+          <li><a href="<?=$this->url('search-reserves')?>"><?=$this->transEsc('Course Reserves')?></a></li>
+          <li><a href="<?=$this->url('search-newitem')?>"><?=$this->transEsc('New Items')?></a></li>
+        </ul>
+        <?=$this->slot('footer-center')->end(); ?>
+      </div>
+      <div class="footer-column">
+        <?php $this->slot('footer-right')->start(); ?>
+        <h2><?=$this->transEsc('Need Help?')?></h2>
+        <ul>
+          <li><a href="<?=$this->url('help-home')?>?topic=search&amp;_=<?=time() ?>" data-lightbox class="help-link"><?=$this->transEsc('Search Tips')?></a></li>
+          <li><a href="<?=$this->url('content-page', ['page' => 'asklibrary']) ?>"><?=$this->transEsc('Ask a Librarian')?></a></li>
+          <li><a href="<?=$this->url('content-page', ['page' => 'faq']) ?>"><?=$this->transEsc('FAQs')?></a></li>
+        </ul>
+        <?=$this->slot('footer-right')->end(); ?>
+      </div>
+      <div class="footer-column">
+        <div id="boxes-box-crl_footer_social" class="boxes-box">
+          <div class="boxes-box-content">
+            <p><strong>Follow CRL</strong></p>
+            <ul>
+              <li><a href="https://www.facebook.com/CenterforResearchLibraries" target="_blank" title="Follow CRL on Facebook"><i class="icon icon-facebook-squared"></i></a></li>
+              <li><a href="https://twitter.com/CRL_global" target="_blank" title="Follow CRL on Twitter"><i class="icon icon-twitter"></i></a></li>
+              <li><a href="https://instagram.com/crllibrary" target="_blank" title="Follow CRL on Instagram"><i class="icon icon-instagram"></i></a></li><li><a href="https://www.youtube.com/crldotedu" target="_blank" title="Follow CRL on YouTube"><i class="icon icon-youtube"></i></a></li>
+              <li><a href="/connect" title="Signup for Connect Newsletter"><i class="icon icon-email"></i></a></li>
+              <li><a href="/news/feed" target="_blank" title="CRL RSS Newsfeed"><i class="icon icon-rss"></i></a></li>
+            </ul>
+            <br>
+            <p><a href="/connect">Signup for Connect Newsletter</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="poweredby">
+    <?=$this->layout()->poweredBy ?>
+  </div>
+</footer>

@@ -4,5 +4,6 @@ return [
     'less' => array(
       'active' => true/false,
       'compiled.less'
-    )
+    ),
+    'favicon' => 'favicon.ico'
 ];
