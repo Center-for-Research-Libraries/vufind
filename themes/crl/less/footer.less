@@ -3,11 +3,25 @@ footer {
   color: @white;
   background-color: @brand-primary;
 
+  h2 {
+    color: @white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+
   ul {
     list-style-type: none;
     padding-left: 0;
 
     li {
+
+      &.social-link {        
+        display: inline-block;
+        margin-right: 1em;
+        display: inline;
+      }
+
       a {
         color: @white;
         text-decoration: none;
@@ -17,5 +31,81 @@ footer {
         }
       }
     }
+  }
+
+  & .footer-box {
+    padding-top:10px;
+    padding-bottom:10px;
+
+    &.crl-quick-links {
+      padding:10px;
+      margin-top: 0;
+      background-color: @crl-blue;
+    }
+  }
+
+  & .nav > li > a {
+    padding: 0;
+  }
+
+  & .nav > li > a:hover,
+  .nav > li > a:focus {
+    padding: 0;
+    background-color: @crl-blue;
+    text-decoration: underline;
+  }
+
+  & a,
+  a:hover {
+    color: #eee;
+  }
+
+  // Ensure inline lists for some links.
+
+  & .footer-bottom ul,
+  .crl-social-media ul {
+    margin: 0;
+    padding: 0;
+
+    & li {
+      display: inline-block;
+      margin-right: 1em;
+      display: inline;
+    }
+  }
+
+  & p {
+    font-size: inherit;
+  }
+
+  & h4 {
+    margin: 0 0 10px;
+    color: #fff;
+  }
+
+  & .icon {
+    font-size: 2em;
+
+    &.icon-instagram,
+    &.icon-youtube {
+      font-size: 1.8em;
+    }
+  }
+
+  & .footer-bottom {
+    border-top: 1px solid #666;
+    color: #aaa;
+    padding-top:10px;
+    text-align: center;
+    color: #aaa;
+
+    & a,
+    a:hover {
+      color: #aaa;
+    }
+  }
+
+  & .crl-social-media a {
+    font-weight: normal !important;
   }
 }

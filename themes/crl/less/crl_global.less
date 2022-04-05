@@ -43,90 +43,10 @@ h2.pane-title {
   margin-bottom: 0;
 }
 
-// Make blockquotes more subtle
-blockquote,
-blockquote footer {
-  font-size: inherit;
-}
-
-blockquote footer {
-  float: left !important;
-}
-
-// Restyling Bootstrap default button colors.
-.btn-primary {
-  color: #ffffff;
-  background-color: @crl-blue;
-  border-color: @crl-blue-lighten;
-}
-
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-  color: #ffffff;
-  border-color: @crl-blue;
-  background-color: @crl-blue-lighten;
-}
-
-.btn-warning {
-  color: #ffffff;
-  background-color: @crl-blue-darken;
-  border-color: @crl-blue;
-}
-
-.btn-warning:active,
-.btn-warning:focus,
-.btn-warning:hover {
-  color: #ffffff;
-  background-color: @crl-blue;
-  border-color: @crl-blue;
-}
-
-.btn-default {
-  color: #fff;
-  border-color: @crl-blue;
-  background-color: @crl-blue;
-}
-
-.btn-default:hover {
-  color: @crl-blue;
-  border-color: @crl-blue;
-  background-color: #fff;
-}
-
-// Icons. Some are bootstrap glyphs and some are fontello.
-.glyphicon {
-  color: @crl-blue-darken;
-  font-size: 1.2em;
-}
-
-.glyphicon-arrow-up,
-.glyphicon-calendar.past {
-  color: #999;
-}
-
-.glyphicon-search,
-.glyphicon-search:hover {
-  color: #fff;
-
-  .tb_nolink & {
-    .open & {
-      color: #e54e4b;
-    }
-  }
-}
-
-// Misc tweaks to special glyphs.
-.pull-right.glyphicon,
-.pull-right.icon {
-  margin-left: 0.5em;
-}
-// General to fix icon styles that are too bold in some browsers.
-i[class^="icon-"]:before,
-i[class*=" icon-"]:before {
-  margin: 0 !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+button,
+input,
+select {
+  border-radius: 0 !important;
 }
 
 // No colons.
