@@ -5,7 +5,8 @@
       <i class="fa fa-bars"></i>
     </button>
     <a class="navbar-brand lang-<?=$this->layout()->userLang ?>" href="<?=$this->url('home')?>">
-      <img class="navbar-brand--logo" src="<?=$this->imageLink('crl_logo_full.png'); ?>" alt="Center for Research Libraries" />
+      <img class="navbar-brand--logo" src="<?=$this->imageLink('logo.svg'); ?>" alt="Center for Research Libraries" />
+      <img class="navbar-brand--logo--small" src="<?=$this->imageLink('crl_brandmark.png'); ?>" alt="Center for Research Libraries" />
     </a>
   </div>
   <?php if (!isset($this->layout()->renderingError)): ?>
@@ -82,6 +83,24 @@
       </nav>
     </div>
   <?php endif; ?>
+</div>
+<div class="secondary-nav">
+  <nav>
+    <ul class="container">
+      <li>
+        <a href="https://www.crl.edu/">CRL Home</a>
+      </li>
+      <li>
+        <a href="#">Ask a Librarian</a>
+      </li>
+      <li>
+        <a href="#">Reading Room</a>
+      </li>
+      <li>
+        <a href="#">Contact CRL</a>
+      </li>
+    </ul>
+  </nav>
 </div>
 <?php if ($this->layout()->searchbox !== false): ?>
   <div class="search container navbar">
