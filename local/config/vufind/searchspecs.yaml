@@ -338,7 +338,6 @@ AllFields:
     - isbn
     - issn
     - long_lat_display
-    - oclc_num
   DismaxHandler: edismax
 #  ExactSettings:
 #    DismaxFields:
