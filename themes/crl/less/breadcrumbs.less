@@ -1,0 +1,19 @@
+.breadcrumbs {
+
+  .container {
+    padding-left: 0;
+
+    .breadcrumb {
+      background-color: transparent;
+
+      >li+li:before {
+        font-weight: normal;
+        color: @brand-primary;
+      }
+
+      li.active {
+        font-weight: bold;
+      }
+    }
+  }
+}
