@@ -1,8 +1,11 @@
 <?php
 return [
     'extends' => 'bootstrap3',
+    'css' => [
+      'compiled.css',
+    ],
     'less' => array(
-      'active' => true/false,
+      'active' => false,
       'compiled.less'
     ),
     'favicon' => 'favicon.ico'
