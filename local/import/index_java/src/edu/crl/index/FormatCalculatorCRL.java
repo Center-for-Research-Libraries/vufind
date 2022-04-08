@@ -80,25 +80,9 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         DataField callNum = (DataField) record.getVariableField("099");
         if (callNum != null) {
             if (callNum.getSubfield('a') != null) {
+                // @todo: Do a "starts with" check instead of "contains". ALso
+                // verify if this shoud be multi-subfield check.
                 if (callNum.getSubfield('a').getData().contains("P-")) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Determine whether a record is a CRL JSTOR.
-     *
-     * @param Record record
-     * @return boolean
-     */
-    protected boolean isJSTOR(Record record) {
-        DataField callNum = (DataField) record.getVariableField("099");
-        if (callNum != null) {
-            if (callNum.getSubfield('a') != null) {
-                if (callNum.getSubfield('a').getData().contains("J-")) {
                     return true;
                 }
             }
@@ -184,10 +168,6 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         // Custom CRL check for dissertation.
         if (isDissertation(record)) {
           result.add("Dissertation");
-        }
-        // Custom CRL check for JSTOR.
-        if (isJSTOR(record)) {
-          result.add("JSTOR");
         }
         if (isConferenceProceeding(record)) {
             result.add("ConferenceProceeding");
