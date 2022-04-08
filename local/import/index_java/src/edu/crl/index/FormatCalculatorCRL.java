@@ -80,6 +80,8 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         DataField callNum = (DataField) record.getVariableField("099");
         if (callNum != null) {
             if (callNum.getSubfield('a') != null) {
+                // @todo: Do a "starts with" check instead of "contains". ALso
+                // verify if this shoud be multi-subfield check.
                 if (callNum.getSubfield('a').getData().contains("P-")) {
                     return true;
                 }
