@@ -1,0 +1,42 @@
+.navbar-brand {
+  height: max-content;
+}
+
+.navbar-brand--logo {
+  display: none !important;
+
+  @media @tablet {
+    display: block !important;
+    width: 425px;
+    height: auto;
+  }
+}
+
+.navbar-brand--logo--small {
+  display: block !important;
+  width: 50px;
+
+  @media @tablet {
+    display: none !important;
+  }
+}
+
+
+.secondary-nav {
+  background-color: @brand-primary;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    li {
+      padding: 1rem;
+
+      a {
+        color: @white;
+      }
+    }
+  }
+}
