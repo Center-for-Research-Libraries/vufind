@@ -94,6 +94,11 @@ If the installation was successful, you should see an "Auto Configure" screen (p
 
 ---
 
+### LESS
+
+As of this writing, all VuFind style development is done using LESS.
+
+To compile LESS, ensure [grunt](https://gruntjs.com/installing-grunt) is installed and run `grunt less`
 
 ### Other notes
 

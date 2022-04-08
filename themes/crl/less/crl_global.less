@@ -1,0 +1,74 @@
+body {
+  background-color: #fff;
+  color: #222;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+// Base typography.
+a {
+  color: @crl-blue-darken;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @crl-blue-darken;
+  text-decoration: underline;
+}
+
+a:focus {
+  color: @crl-blue-darken;
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.6em;
+
+  & a {
+    font-weight: bold;
+  }
+}
+
+h2 {
+  color: @crl-blue;
+}
+
+h2.pane-title {
+  box-shadow: @crl-box-shadow;
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: 300;
+  text-transform: capitalize;
+  background: #00173d;
+  padding: 10px 15px;
+  margin-bottom: 0;
+}
+
+button,
+input,
+select {
+  border-radius: 0 !important;
+}
+
+// No colons.
+span.field-colon {
+  display: none;
+}
+
+
+.u-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.field-name-field-facet-ref {
+  margin-right: 5px;
+}
+
+.main {
+  background-color: @white;
+}
