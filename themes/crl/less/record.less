@@ -53,7 +53,8 @@
     padding-left: 0;
   }
 
-  .table-main-details {
+  .table-main-details,
+  .table-description-tab {
     width: initial;
     border: 1px solid #dadce0;
     border-collapse: separate;
@@ -103,5 +104,19 @@
     font-weight: bold;
     border: 0;
     border-bottom: 3px solid @crl-blue-lighten;
+  }
+
+  .tab-content {
+    margin-bottom: 2rem;
+
+    @media @tablet {
+      margin-bottom: 4rem;
+    }
+
+    .details-tab {
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+    }
   }
 }
