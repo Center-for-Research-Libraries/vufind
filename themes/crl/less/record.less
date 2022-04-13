@@ -86,9 +86,14 @@
 
   .nav-tabs>li>a {
     border: 0;
+    padding: 5px;
     color: #70757a;
     font-size: 1rem;
     font-weight: bold;
+
+    @media @tablet {
+      padding: 10px 15px;
+    }
 
     &:hover,
     &:focus {
