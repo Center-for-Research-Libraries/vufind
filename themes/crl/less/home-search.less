@@ -1,0 +1,51 @@
+.searchHomeContent,
+.searchbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchForm {
+  width: 100%;
+  padding: 2rem 3rem;
+  background-color: @brand-primary;
+
+  @media @tablet {
+    width: auto;
+  }
+
+  .form-control {
+    margin-bottom: 1rem;
+
+    @media @tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    width: 100%;
+    border: 1px solid @white;
+    background-color: @brand-primary;
+    color: @white;
+
+    &:hover {
+      background-color: @white;
+      color: @brand-primary;
+    }
+
+    @media @tablet {
+      width: auto;
+    }
+  }
+
+  a {
+    float: right;
+    color: @white;
+  }
+
+  #searchForm_lookfor {
+    @media @normal {
+      width: 500px;
+    }
+  }
+}
