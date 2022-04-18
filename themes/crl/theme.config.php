@@ -8,5 +8,13 @@ return [
       'active' => false,
       'compiled.less'
     ),
-    'favicon' => 'favicon.ico'
+    'favicon' => 'favicon.ico',
+    'helpers' => [
+      'factories' => [
+        'VuFind\View\Helper\Root\RecordDataFormatter' => 'CRL\View\Helper\Root\RecordDataFormatterFactory'
+      ],
+      'aliases' => [
+        'recordDataFormatter' => 'VuFind\View\Helper\Root\RecordDataFormatter',
+      ],
+    ],
 ];
