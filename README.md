@@ -55,6 +55,7 @@ xdebug.remote_port=9000
 xdebug.remote_handler=dbgp
 xdebug.show_exception_trace=0
 ```
+1. When running install.php be sure to enter a module name of "CRL". This will ensure CRL extensions are loaded.
 1. Copy VuFind's `local/httpd-vufind.conf.sample` to `/Applications/MAMP/conf/apache/extra/httpd-vufind.conf`
 1. Add the following line to the end of `/Applications/MAMP/conf/apache/httpd.conf:`
 ```

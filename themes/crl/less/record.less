@@ -1,3 +1,7 @@
+.record-nav {
+  margin: 2rem 0 3rem;
+}
+
 .action-toolbar {
   a {
     align-items: center;
@@ -29,4 +33,95 @@
 
 .table-striped>tbody>tr:nth-of-type(odd) {
   background-color: @white !important;
+}
+
+// Setting this until config to remove cover is set up.
+.record {
+  .media-left {
+    display: none;
+  }
+}
+
+// Record table style.
+.record {
+  a {
+    color: @crl-blue;
+  }
+
+  .media {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .table-main-details,
+  .table-description-tab {
+    width: initial;
+    border: 1px solid #dadce0;
+    border-collapse: separate;
+    border-radius: 8px;
+    margin-bottom: 8px;
+
+    >tbody>tr>th {
+      padding-left: 18px;
+    }
+
+    >tbody>tr>td {
+      padding-right: 24px;
+    }
+
+    >tbody>tr:first-child>th,
+    >tbody>tr:first-child>td {
+      padding-top: 18px;
+    }
+
+    >tbody>tr:last-child>th,
+    >tbody>tr:last-child>td {
+      padding-bottom: 18px;
+    }
+  }
+
+  .nav-tabs {
+    margin: 2rem 0 1.5rem;
+  }
+
+  .nav-tabs>li>a {
+    border: 0;
+    padding: 5px;
+    color: #70757a;
+    font-size: 1rem;
+    font-weight: bold;
+
+    @media @tablet {
+      padding: 10px 15px;
+    }
+
+    &:hover,
+    &:focus {
+      color: @crl-blue-lighten;
+      border: 0;
+      outline: none;
+      background-color: transparent;
+    }
+  }
+
+  .nav-tabs>li.active>a {
+    color: @crl-blue-lighten;
+    font-weight: bold;
+    border: 0;
+    border-bottom: 3px solid @crl-blue-lighten;
+  }
+
+  .tab-content {
+    margin-bottom: 2rem;
+
+    @media @tablet {
+      margin-bottom: 4rem;
+    }
+
+    .details-tab {
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+    }
+  }
 }

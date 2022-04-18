@@ -135,11 +135,13 @@
    <field name="format" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="crl_scope" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="author" type="textProper" indexed="true" stored="true" multiValued="true" termVectors="true"/>
+   <field name="author_lnk" type="textProper" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="author_variant" type="text" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="author_role" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="author_facet" type="textFacet" indexed="true" stored="true" multiValued="true"/>
    <field name="author_sort" type="string" indexed="true" stored="true"/>
    <field name="title" type="text" indexed="true" stored="true"/>
+   <field name="title_lnk" type="text" indexed="true" stored="true"/>
    <field name="title_sort" type="string" indexed="true" stored="true"/>
    <field name="title_sub" type="text" indexed="true" stored="true"/>
    <field name="title_short" type="text" indexed="true" stored="true"/>
@@ -278,6 +280,8 @@
  <copyField source="format"    dest="allfields_unstemmed"/>
  <copyField source="crl_scope"    dest="allfields"/>
  <copyField source="crl_scope"    dest="allfields_unstemmed"/>
+ <copyField source="oclc_num"    dest="allfields"/>
+ <copyField source="oclc_num"    dest="allfields_unstemmed"/>
  <!-- CopyFields for call numbers -->
  <copyField source="dewey-raw" dest="dewey-search"/>
  <copyField source="callnumber-raw" dest="callnumber-search"/>
