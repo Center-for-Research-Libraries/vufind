@@ -236,6 +236,7 @@
 Author:
   DismaxFields:
     - author^100
+    - author_lnk
     - author2
     - author_additional
     - author_corporate
@@ -297,6 +298,7 @@ Title:
     - title_full_unstemmed^450
     - title_full^400
     - title^300
+    - title_lnk^200
     - title_alt^200
     - title_new^100
     - title_old
@@ -338,7 +340,6 @@ AllFields:
     - isbn
     - issn
     - long_lat_display
-    - oclc_num
   DismaxHandler: edismax
 #  ExactSettings:
 #    DismaxFields:
