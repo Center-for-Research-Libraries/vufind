@@ -11,10 +11,12 @@ return [
     'favicon' => 'favicon.ico',
     'helpers' => [
       'factories' => [
-        'VuFind\View\Helper\Root\RecordDataFormatter' => 'CRL\View\Helper\Root\RecordDataFormatterFactory'
+        'CRL\View\Helper\Root\RecordDataFormatter' => 'CRL\View\Helper\Root\RecordDataFormatterFactory',
+        'CRL\View\Helper\Root\Record' => 'VuFind\View\Helper\Root\RecordFactory',
       ],
       'aliases' => [
-        'recordDataFormatter' => 'VuFind\View\Helper\Root\RecordDataFormatter',
+        'recordDataFormatter' => 'CRL\View\Helper\Root\RecordDataFormatter',
+        'record' => 'CRL\View\Helper\Root\Record',
       ],
     ],
 ];
