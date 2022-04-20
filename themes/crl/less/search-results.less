@@ -8,15 +8,6 @@
       font-size: 2rem;
     }
   }
-
-  .sidebar {
-    h2 {
-      margin-top: 0;
-      color: black;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-  }
 }
 
 .top-facets {
@@ -66,11 +57,11 @@
     width: fit-content;
 
     &:hover {
-      background-color: #F8F8F8;
+      background-color: @link-focus;
     }
 
     a:hover {
-      background-color: #F8F8F8;
+      background-color: @link-focus;
       text-decoration: none;
     }
 
@@ -112,7 +103,6 @@
 }
 
 // Record list.
-
 .record-list {
   border: 1px solid #dadce0;
   border-radius: 8px;
@@ -157,7 +147,7 @@
       text-decoration: none;
 
       &:hover {
-        background-color: #F8F8F8;
+        background-color: @link-focus;
         text-decoration: none;
       }
     }
@@ -165,7 +155,6 @@
 }
 
 // Search tools.
-
 .searchtools {
   margin: 0 0 30px;
   padding: 16px 20px !important;
