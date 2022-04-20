@@ -1,0 +1,185 @@
+.template-name-results {
+  .breadcrumb .active {
+    font-size: 1.5rem;
+    font-weight: normal !important;
+    color: @brand-primary;
+
+    @media @tablet {
+      font-size: 2rem;
+    }
+  }
+
+  .sidebar {
+    h2 {
+      margin-top: 0;
+      color: black;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.top-facets {
+  margin-bottom: 30px;
+
+  .top-title {
+    margin-bottom: 2rem;
+    padding: 0;
+
+    .fa {
+      display: none;
+    }
+  }
+
+  .top-facets-contents {
+    margin-bottom: 2rem;
+  }
+
+  .more-btn,
+  .less-btn {
+    padding: 0;
+    background-color: transparent;
+
+    &:hover {
+      color: @crl-blue;
+    }
+
+    &:focus {
+      outline: 0;
+      text-decoration: underline;
+    }
+  }
+
+  .top-facet-inner {
+    align-items: center;
+    -webkit-user-select: none;
+    background: #FFF;
+    border: 1px solid #dadce0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    outline: none;
+    padding: 5px 10px;
+    max-width: 100%;
+    transition: box-shadow 200ms cubic-bezier(0.4,0,0.2,1);
+    width: fit-content;
+
+    &:hover {
+      background-color: #F8F8F8;
+    }
+
+    a:hover {
+      background-color: #F8F8F8;
+      text-decoration: none;
+    }
+
+    .badge {
+      margin-right: 5px;
+      padding: 3px 7px;
+      line-height: 1;
+      color: #fff;
+      font-weight: normal;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      background-color: @crl-blue-lighten;
+      border-radius: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.search-header {
+  margin-bottom: 30px;
+
+  .search-filter-toggle {
+    border-radius: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    background-color: @brand-primary;
+    color: white;
+
+    &:hover {
+      background-color: @white;
+      color: @brand-primary;
+      text-decoration: none;
+    }
+  }
+}
+
+// Record list.
+
+.record-list {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 16px 0;
+
+  li.result {
+    border-top: 1px solid #dadce0;
+    margin-bottom: 30px;
+
+    .result-body {
+      padding-right: 10px;
+
+      .title {
+        display: block;
+        margin: 0 0 10px;
+        font-size: 1.25rem;
+      }
+    }
+
+    .result-formats {
+      margin: 10px 0;
+    }
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    .save-record {
+      align-items: center;
+      -webkit-user-select: none;
+      border: 1px solid #dadce0;
+      border-radius: 20px;
+      box-sizing: border-box;
+      display: flex;
+      height: 32px;
+      outline: none;
+      padding: 5px 10px;
+      max-width: 100%;
+      transition: box-shadow 200ms cubic-bezier(0.4,0,0.2,1);
+      width: fit-content;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #F8F8F8;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Search tools.
+
+.searchtools {
+  margin: 0 0 30px;
+  padding: 16px 20px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @media @tablet {
+    flex-direction: row;
+    margin: 0 0 70px;
+  }
+
+  a {
+    margin-bottom: 10px;
+  }
+}

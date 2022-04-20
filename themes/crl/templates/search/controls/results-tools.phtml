@@ -1,0 +1,14 @@
+<h3><?=$this->transEsc('Search Tools')?>:</h3>
+<div class="searchtools hidden-print">
+  <a href="<?=$this->results->getUrlQuery()->setViewParam('rss')?>"> <?=$this->transEsc('Get RSS Feed')?></a>
+  <a href="<?=$this->url('search-email')?>" class="mailSearch" data-lightbox id="mailSearch<?=$this->escapeHtmlAttr($this->results->getSearchId())?>">
+     <?=$this->transEsc('Email this Search')?>
+  </a>
+  <?php if ($this->accountCapabilities()->getSavedSearchSetting() === 'enabled' && is_numeric($this->results->getSearchId())): ?>
+    <?php if ($this->results->isSavedSearch()): ?>
+      <a href="<?=$this->url('myresearch-savesearch')?>?delete=<?=urlencode($this->results->getSearchId())?>"></i> <?=$this->transEsc('save_search_remove')?></a>
+    <?php else: ?>
+      <a href="<?=$this->url('myresearch-savesearch')?>?save=<?=urlencode($this->results->getSearchId())?>"> <?=$this->transEsc('save_search')?></a>
+    <?php endif; ?>
+  <?php endif; ?>
+</div>

@@ -1,0 +1,44 @@
+ul.pagination {
+  display: flex;
+  justify-content: center;
+
+  li {
+    a,
+    span {
+      border: 0 !important;
+    }
+  }
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+  border: 0 !important;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: transparent !important;
+  }
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+  color: @crl-blue;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.pagination>li:first-child>span {
+  background-color: transparent;
+  color: @crl-blue;
+
+  &:hover {
+    color: @crl-blue;
+    text-decoration: underline;
+  }
+}
