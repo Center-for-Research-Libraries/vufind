@@ -81,12 +81,24 @@ span.field-colon {
 }
 
 // Bootstrap 3 Borderless Table.
-
 .table-borderless > tbody > tr > td,
 .table-borderless > tbody > tr > th,
 .table-borderless > tfoot > tr > td,
 .table-borderless > tfoot > tr > th,
 .table-borderless > thead > tr > td,
 .table-borderless > thead > tr > th {
-    border: none;
+  border: none;
+}
+
+// Temporary alert notifcation.
+.temporary-notification {
+  background: @crl-blue-lighten;
+  padding: 10px 20px;
+  text-align: center;
+  color: @white;
+
+  a {
+    color: @white;
+    text-decoration: underline;
+  }
 }
