@@ -34,6 +34,16 @@
   .facet-group .active {
     background-color: @link-focus;
     color: #00173d;
+
+    > .text {
+      > .facet-value {
+        &::after {
+          margin-left: 4px;
+          color: @crl-blue;
+          content: "\2713";
+        }
+      }
+    }
   }
 
   .date-fields {
