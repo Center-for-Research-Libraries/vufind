@@ -1,19 +1,13 @@
-# About the CRL Catalog
+# About the CRL Online Catalog
 
-## Borrowing from CRL
+## New Catalog Preview
 
-Scholars and researchers from CRL member institutions have free and unlimited use of the CRL collections through interlibrary loan.
+**This website is a preview of the upcoming platform that will replace [catalog.crl.edu](http://catalog.crl.edu). Like any pre-release software, it is incomplete and contains bugs.**
 
-[Learn More](borrowing)
+CRL's new online catalog will be powered by [FOLIO](https://www.folio.org/) and [VuFind](http://vufind.org/). This "Alpha" release prototype demonstrates these two systems working together to deliver an improved online discovery experience for CRL's collective collections. Though incomplete, this prototype is sufficiently refined for self-navigation and early evaluation.  
 
-## Unsuccessful Search?
+## Feedback
 
-If you are affiliated with one of our member institutions CRL may be able to acquire the material you are looking for through the Demand Purchase Program.
+While CRL continues to develop this platform we welcome comments and feedback from early reviewers at [websystems@crl.edu](mailto://websystems@crl.edu).
 
-[Learn More](http://www.crl.edu/collections/cooperative-collection-building/demand-purchase-program)
-
-## Research Help
-
-A Reference Consultation can help you identify material in our collection that is relevant to your research topic. 
-
-[Learn More](http://www.crl.edu/services/reference/)
+&nbsp;
