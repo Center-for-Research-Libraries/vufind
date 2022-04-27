@@ -90,16 +90,10 @@
     <span class="catalog-header">ONLINE CATALOG</span>
     <ul class="container">
       <li>
-        <a href="https://www.crl.edu/">CRL Home</a>
+        <a href="<?=$this->url('content-page', ['page' => 'about']) ?>"><?=$this->transEsc('About the Catalog')?></a>
       </li>
       <li>
-        <a href="#">Ask a Librarian</a>
-      </li>
-      <li>
-        <a href="#">Reading Room</a>
-      </li>
-      <li>
-        <a href="#">Contact CRL</a>
+        <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>"><?=$this->transEsc('Borrowing from CRL')?></a>
       </li>
     </ul>
   </nav>
