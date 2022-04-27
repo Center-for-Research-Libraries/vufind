@@ -1,6 +1,8 @@
 .adv-group {
+  overflow: hidden;
   background-color: @brand-primary;
   color: @white;
+  padding: 20px 30px 30px;
 
   .adv-search {
     margin-bottom: 10px;
@@ -14,17 +16,25 @@
   }
 
   .add_search_link {
-    display: inline-block;
-    background: #e0e0e0;
-    margin-bottom: 20px;
+    border-radius: 0;
+    border: 1px solid @white;
     padding: 5px 10px;
-    border-radius: 32px;
-    font-size: 13px;
-    font-weight: normal;
-    color: #333;
+    background-color: @brand-primary;
+    color: @white;
 
     &:hover {
+      background-color: @white;
       text-decoration: none;
+      color: @brand-primary;
     }
   }
+}
+
+#groupPlaceHolder {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.adv-submit {
+  margin: 20px 0;
 }
