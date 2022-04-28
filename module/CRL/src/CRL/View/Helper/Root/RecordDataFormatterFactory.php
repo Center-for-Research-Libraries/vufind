@@ -18,6 +18,10 @@
         // Proof-of-concept for a custom field addition. May be removed upon
         // further evaluation.
         $spec->setLine('Key CRL Collections', 'getCRLScopes');
+        // Add related links and continues.
+        $spec->setTemplateLine(
+            'Related Items', 'getAllRecordLinks', 'data-allRecordLinks.phtml'
+        );
         return $spec->getArray();
      }
 
