@@ -105,3 +105,4 @@ To compile LESS, ensure [grunt](https://gruntjs.com/installing-grunt) is install
   * A call to `local/import/import.sh` will do a complete wipe and rebuild of the solr index, which may take multiple days. Use with caution.
   * A call to `local/import/incremental.sh` will fetch changes since the last import. This can be run frequently.
   * The last import timestamp is saved in `local/harvest/crl/last_harvest.txt`. This file can be manually manipulated for special needs. For example, running a complete in-place re-harvest (allowing exsiting index data to remain while all records are re-fetched) can be accomplished by setting the date in `local/harvest/crl/last_harvest.txt` to a time in the very distanct past and running `local/import/incremental.sh`.
+
