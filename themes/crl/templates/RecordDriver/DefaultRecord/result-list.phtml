@@ -151,7 +151,9 @@
       <?php endif; ?>
 
       <div class="result-formats">
-        <?=$this->record($this->driver)->getFormatList() ?>
+        <?php if($this->driver->isOnline()): ?>
+            <span class="format <?=$this->record($this->driver)->getFormatClass("Online Access") ?>"><?=$this->transEsc("Online Access") ?></span>
+        <?php endif; ?>
 
         <?php if (!$openUrlActive && empty($urls) && $this->driver->supportsAjaxStatus()): ?>
           <span class="status ajax-availability hidden">
