@@ -1,28 +1,29 @@
 <?php
 
-return array (
-  'vufind' => 
-  array (
-    'plugin_managers' => 
-    array (
-      'recorddriver' => 
-      array (
-        'factories' => 
-        array (
-          'CRL\\RecordDriver\\SolrMarc' => 'VuFind\\RecordDriver\\SolrDefaultFactory',
-        ),
-        'aliases' => 
-        array (
-          'VuFind\\RecordDriver\\SolrMarc' => 'CRL\\RecordDriver\\SolrMarc',
-        ),
-        'delegators' => 
-        array (
-          'CRL\\RecordDriver\\SolrMarc' => 
-          array (
-            0 => 'VuFind\\RecordDriver\\IlsAwareDelegatorFactory',
-          ),
-        ),
-      ),
-    ),
-  ),
-);
+return [
+    'vufind' => [
+        'plugin_managers' => [
+            'ils_driver' => [
+                'factories' => [
+                    'CRL\\ILS\\Driver\\Folio' => 'VuFind\\ILS\\Driver\\FolioFactory',
+                ],
+                'aliases' => [
+                    'VuFind\\ILS\\Driver\\Folio' => 'CRL\\ILS\\Driver\\Folio',
+                ]
+            ],
+            'recorddriver' => [
+                'factories' => [
+                    'CRL\\RecordDriver\\SolrMarc' => 'VuFind\\RecordDriver\\SolrDefaultFactory'
+                ],
+                'aliases' => [
+                    'VuFind\\RecordDriver\\SolrMarc' => 'CRL\\RecordDriver\\SolrMarc'
+                ],
+                'delegators' => [
+                    'CRL\\RecordDriver\\SolrMarc' => [
+                        0 => 'VuFind\\RecordDriver\\IlsAwareDelegatorFactory',
+                    ],
+                ],
+            ],
+        ],
+    ],
+];
