@@ -25,4 +25,3 @@ class Folio extends \VuFind\ILS\Driver\Folio
 
 
 }
-
