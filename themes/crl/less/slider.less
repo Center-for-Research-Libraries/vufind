@@ -1,0 +1,32 @@
+.slider-container {
+  margin-bottom: 20px;
+
+  + .btn {
+    border-radius: 20px !important;
+    padding: 5px 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    float: right;
+
+    &:hover {
+      color: @black;
+      background-color: @link-focus;
+    }
+  }
+
+  .slider-handle {
+    opacity: 100%;
+    background-color: @crl-blue;
+    border-radius: 10px;
+  }
+
+  .slider-track {
+    margin-top: -2px !important;
+    background-color: @crl-blue-lighten;
+    height: 5px !important;
+
+    .slider-selection {
+      background-color: @crl-blue;
+    }
+  }
+}

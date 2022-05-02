@@ -1,0 +1,69 @@
+#advSearchForm {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.adv-term-remove {
+  opacity: 1;
+}
+
+.close-btn {
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('../images/icons/times.svg');
+
+  &:hover,
+  &:focus {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
+}
+
+#groupPlaceHolder {
+  padding-left: 0;
+}
+
+#groupJoin {
+  margin-bottom: 1rem;
+}
+
+.adv-group-terms {
+  margin-bottom: 1rem;
+
+  .adv-search:last-of-type {
+    margin-bottom: 1rem;
+  }
+}
+
+.adv-submit {
+  margin-bottom: 4rem;
+}
+
+.adv-group-match {
+  margin-bottom: 1rem;
+}
+
+.solr,
+.range {
+  position: relative;
+  border: 1px solid @border-line;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  padding: 15px 20px;
+
+  @media @tablet {
+    margin: 0 1rem 2rem 0;
+  }
+
+  legend { /* Position at top left corner of fieldset */
+    border-bottom: 0;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+  }
+}

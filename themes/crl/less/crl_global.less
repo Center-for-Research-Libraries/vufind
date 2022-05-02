@@ -29,7 +29,9 @@ p {
 }
 
 h2 {
-  color: @crl-blue;
+  color: @black;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 h2.pane-title {
@@ -43,10 +45,41 @@ h2.pane-title {
   margin-bottom: 0;
 }
 
-button,
 input,
 select {
   border-radius: 0 !important;
+}
+
+a[role="button"],
+input.btn {
+  align-items: center;
+  -webkit-user-select: none;
+  border: 1px solid #dadce0;
+  border-radius: 20px !important;
+  box-sizing: border-box;
+  display: flex;
+  height: 32px;
+  outline: none;
+  padding: 5px 10px;
+  max-width: 100%;
+  transition: box-shadow 200ms cubic-bezier(0.4,0,0.2,1);
+  width: fit-content;
+  text-decoration: none;
+
+  &:hover {
+    background-color: @link-focus;
+    text-decoration: none;
+  }
+}
+
+.btn-primary,
+.clear-btn {
+  color: @brand-primary;
+  background-color: @white;
+
+  &:hover {
+    color: @brand-primary;
+  }
 }
 
 // No colons.
@@ -54,6 +87,14 @@ span.field-colon {
   display: none;
 }
 
+
+label {
+  color: #3c4043;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
 
 .u-visually-hidden {
   clip: rect(0 0 0 0);
@@ -101,4 +142,47 @@ span.field-colon {
     color: @white;
     text-decoration: underline;
   }
+}
+
+// Advanced search header.
+.navbar-form {
+  padding: 2rem 1rem;
+  background-color: @brand-primary;
+  color: @white;
+
+  a {
+    color: @white;
+  }
+}
+
+.facet {
+  padding: 1rem;
+}
+
+.badge {
+  background-color: transparent;
+  color: @crl-blue-lighten;
+  letter-spacing: 1px;
+}
+
+.active-filters .facet,
+.facet-group .active {
+  background-color: @link-focus;
+  color: #00173d;
+
+  > .text {
+    > .facet-value {
+      &::after {
+        margin-left: 4px;
+        color: @crl-blue;
+        content: "\2713";
+      }
+    }
+  }
+}
+
+.date-fields {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
