@@ -112,11 +112,6 @@
           <span class="callnumber ajax-availability hidden">
             <?=$this->transEsc('Loading')?>...<br/>
           </span>
-          <strong><?=$this->transEsc('Located')?>:</strong>
-          <span class="location ajax-availability hidden">
-            <?=$this->transEsc('Loading')?>...
-          </span>
-          <div class="locationDetails"></div>
         <?php else: ?>
           <?php $summCallNo = $this->driver->getCallNumber(); if (!empty($summCallNo)): ?>
             <strong><?=$this->transEsc('Call Number')?>:</strong> <?=$this->escapeHtml($summCallNo)?>
