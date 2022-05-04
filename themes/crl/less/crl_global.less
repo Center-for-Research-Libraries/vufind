@@ -50,10 +50,12 @@ select {
   border-radius: 0 !important;
 }
 
+// TODO: Break this out into button.less and create variable for this style.
 a[role="button"],
 input.btn,
 a.edit,
-.bulkActionButtons button {
+.bulkActionButtons button,
+#recent-searches + a {
   align-items: center;
   -webkit-user-select: none;
   background-color: @white;
@@ -135,6 +137,13 @@ label {
   border: none;
 }
 
+// Modifies Bootstrap 3 Striped Table.
+.table-striped {
+  border-left: 1px solid @border-line;
+  border-right: 1px solid @border-line;
+  border-bottom: 1px solid @border-line;
+}
+
 // Temporary alert notifcation.
 .temporary-notification {
   background: @crl-blue-lighten;
@@ -148,88 +157,35 @@ label {
   }
 }
 
-// Advanced search header.
-.navbar-form {
-  padding: 2rem 1rem;
-  background-color: @brand-primary;
-  color: @white;
+// Styles for temporary about area.
+.crl-borrowing,
+.template-name-markdown #content {
+  border: 1px solid @border-line;
+  padding: 1rem 2rem;
+  margin-top: 20px;
 
-  a {
-    color: @white;
+  h1 {
+    font-size: 1.5rem;
   }
 }
 
-.facet {
-  padding: 1rem;
-}
+#recent-searches {
+  .fa {
+    display: none;
+  }
 
-.badge {
-  background-color: transparent;
-  color: @crl-blue-lighten;
-  letter-spacing: 1px;
-}
-
-.active-filters .facet,
-.facet-group .active {
-  background-color: @link-focus;
-  color: #00173d;
-
-  > .text {
-    > .facet-value {
-      &::after {
-        margin-left: 4px;
-        color: @crl-blue;
-        content: "\2713";
-      }
+  + a {
+    .fa {
+      display: none;
     }
   }
 }
 
-.date-fields {
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-}
 
+.dropdown-menu>.active>a {
+  background-color: @crl-blue-lighten;
 
-// Browse views global styles.
-#alphaBrowseForm,
-.form-search-reserves {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-
-  select {
-    display: block;
-  }
-}
-
-.channel-search {
-  display: flex;
-
-  label {
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-  }
-
-  .btn {
-    margin-top: 25px;
-    margin-left: 10px;
-  }
-}
-
-.form-search-reserves {
-  .form-group {
-    display: flex;
-
-    label {
-      min-width: 200px;
-      margin-right: 10px;
-    }
-  }
-
-  .btn-primary {
-    margin-top: 1rem;
+  &:hover {
+    background-color: @crl-blue-lighten;
   }
 }
