@@ -51,9 +51,12 @@ select {
 }
 
 a[role="button"],
-input.btn {
+input.btn,
+a.edit,
+.bulkActionButtons button {
   align-items: center;
   -webkit-user-select: none;
+  background-color: @white;
   border: 1px solid #dadce0;
   border-radius: 20px !important;
   box-sizing: border-box;
@@ -67,6 +70,7 @@ input.btn {
   text-decoration: none;
 
   &:hover {
+    color: @brand-primary;
     background-color: @link-focus;
     text-decoration: none;
   }
@@ -185,4 +189,47 @@ label {
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 15px;
+}
+
+
+// Browse views global styles.
+#alphaBrowseForm,
+.form-search-reserves {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  select {
+    display: block;
+  }
+}
+
+.channel-search {
+  display: flex;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  .btn {
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+}
+
+.form-search-reserves {
+  .form-group {
+    display: flex;
+
+    label {
+      min-width: 200px;
+      margin-right: 10px;
+    }
+  }
+
+  .btn-primary {
+    margin-top: 1rem;
+  }
 }
