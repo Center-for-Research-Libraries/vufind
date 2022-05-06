@@ -1,5 +1,7 @@
+@import (reference) "button.less";
+
 body {
-  background-color: #fff;
+  background-color: @white;
   color: #222;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
@@ -29,12 +31,14 @@ p {
 }
 
 h2 {
-  color: @crl-blue;
+  color: @black;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 h2.pane-title {
   box-shadow: @crl-box-shadow;
-  color: #fff;
+  color: @white;
   font-size: 1.6em;
   font-weight: 300;
   text-transform: capitalize;
@@ -43,10 +47,25 @@ h2.pane-title {
   margin-bottom: 0;
 }
 
-button,
 input,
 select {
   border-radius: 0 !important;
+}
+
+a[role="button"],
+input.btn,
+a.edit {
+  .crl-button();
+}
+
+.btn-primary,
+.clear-btn {
+  color: @brand-primary;
+  background-color: @white;
+
+  &:hover {
+    color: @brand-primary;
+  }
 }
 
 // No colons.
@@ -54,6 +73,14 @@ span.field-colon {
   display: none;
 }
 
+
+label {
+  color: #3c4043;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
 
 .u-visually-hidden {
   clip: rect(0 0 0 0);
@@ -90,6 +117,13 @@ span.field-colon {
   border: none;
 }
 
+// Modifies Bootstrap 3 Striped Table.
+.table-striped {
+  border-left: 1px solid @border-line;
+  border-right: 1px solid @border-line;
+  border-bottom: 1px solid @border-line;
+}
+
 // Temporary alert notifcation.
 .temporary-notification {
   background: @crl-blue-lighten;
@@ -100,5 +134,40 @@ span.field-colon {
   a {
     color: @white;
     text-decoration: underline;
+  }
+}
+
+// Styles for temporary about area.
+.crl-borrowing,
+.template-name-markdown #content {
+  border: 1px solid @border-line;
+  padding: 1rem 2rem;
+  margin-top: 20px;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+#recent-searches {
+  .fa {
+    display: none;
+  }
+
+  + a {
+    .crl-button();
+
+    .fa {
+      display: none;
+    }
+  }
+}
+
+
+.dropdown-menu>.active>a {
+  background-color: @crl-blue-lighten;
+
+  &:hover {
+    background-color: @crl-blue-lighten;
   }
 }

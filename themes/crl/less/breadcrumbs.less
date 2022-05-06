@@ -1,3 +1,5 @@
+// Global breadcrumb style.
+
 .breadcrumbs {
   .container {
     @media @tablet {
@@ -9,6 +11,10 @@
       padding-right: 0;
       padding-left: 0;
       background-color: transparent;
+
+      .template-name-advanced & {
+        margin-top: 0;
+      }
 
       >li+li:before {
         font-weight: normal;
