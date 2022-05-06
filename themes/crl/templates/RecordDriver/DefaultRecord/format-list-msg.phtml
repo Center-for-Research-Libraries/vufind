@@ -6,7 +6,7 @@
   <?php endif; ?>
 <?php endforeach; ?>
 </p>
-<?php if (!in_array("Online Access", $formats)): ?>
+<?php if (!in_array(\CRL\Module::ONLINE_FORMAT, $formats)): ?>
   <p><?=$this->transEsc("Note that CRL will often digitize materials when fulfilling borrowing requests")?></p>
 <?php endif; ?>
 

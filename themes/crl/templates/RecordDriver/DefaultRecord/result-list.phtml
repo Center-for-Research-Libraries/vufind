@@ -162,7 +162,7 @@
 
       <div class="result-formats">
         <?php if($this->driver->isOnline()): ?>
-            <span class="format <?=$this->record($this->driver)->getFormatClass("Online Access") ?>"><?=$this->transEsc("Online Access") ?></span>
+            <span class="format <?=$this->record($this->driver)->getFormatClass(\CRL\Module::ONLINE_FORMAT) ?>"><?=$this->transEsc("Online Access") ?></span>
         <?php endif; ?>
 
         <?php if (!$openUrlActive && empty($urls) && $this->driver->supportsAjaxStatus()): ?>
