@@ -66,6 +66,21 @@
           <?php endif; ?>
         <?php endif; ?>
       </div>
+      
+      <? ### CRL customization ### ?>
+      <? ### Add publisher and desc details ### ?>
+      <?php $pubDetails = $this->driver->getPublicationDetails();?>
+      <?php if (!empty($pubDetails)): ?>
+        <?php foreach ($pubDetails as $pd): ?>
+          <div><?=$pd?></div>
+        <?php endforeach; ?>
+      <?php endif; ?>
+      <?php $physicalDesc = $this->driver->getPhysicalDescriptions();?>
+      <?php if (!empty($physicalDesc)): ?>
+        <?php foreach ($physicalDesc as $d):?>
+          <div><?=$d?></div>
+        <?php endforeach; ?>
+      <?php endif; ?>
 
       <?php if(!$this->driver->isCollection()): ?>
         <?php if ($snippet = $this->driver->getHighlightedSnippet()): ?>
