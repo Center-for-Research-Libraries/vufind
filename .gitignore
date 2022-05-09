@@ -27,3 +27,4 @@ local/config/vufind/Folio.ini
 local/httpd-vufind.conf
 env.bat
 import/*.tmp
+.DS_Store

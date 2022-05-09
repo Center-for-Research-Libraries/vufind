@@ -1,5 +1,6 @@
+// Global sidebar styles.
 .sidebar {
-  h2 {
+  h2, h3 {
     margin-top: 0;
     color: black;
     font-size: 1.25rem;
@@ -17,71 +18,6 @@
     &:hover {
       background-color: @white;
       color: @crl-blue;
-    }
-  }
-
-  .facet {
-    padding: 1rem;
-  }
-
-  .badge {
-    background-color: transparent;
-    color: @crl-blue-lighten;
-    letter-spacing: 1px;
-  }
-
-  .active-filters .facet,
-  .facet-group .active {
-    background-color: @link-focus;
-    color: #00173d;
-
-    > .text {
-      > .facet-value {
-        &::after {
-          margin-left: 4px;
-          color: @crl-blue;
-          content: "\2713";
-        }
-      }
-    }
-  }
-
-  .date-fields {
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-  }
-
-  .slider-container {
-    margin-bottom: 20px;
-
-    + .btn {
-      border-radius: 20px !important;
-      padding: 5px 10px;
-      font-size: 15px;
-      letter-spacing: 1px;
-      float: right;
-
-      &:hover {
-        color: @black;
-        background-color: @link-focus;
-      }
-    }
-
-    .slider-handle {
-      opacity: 100%;
-      background-color: @crl-blue;
-      border-radius: 10px;
-    }
-
-    .slider-track {
-      margin-top: -2px !important;
-      background-color: @crl-blue-lighten;
-      height: 5px !important;
-
-      .slider-selection {
-        background-color: @crl-blue;
-      }
     }
   }
 }

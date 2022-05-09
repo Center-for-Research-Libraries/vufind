@@ -41,6 +41,12 @@ use Laminas\Mvc\MvcEvent;
  */
 class Module
 {
+  
+    /**
+     * Centralize definition for Online string.
+     */
+    const ONLINE_FORMAT = "Online Access";
+        
     /**
      * Get module configuration
      *
