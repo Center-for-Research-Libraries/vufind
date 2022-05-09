@@ -1,0 +1,12 @@
+<?php $formats = $this->driver->getFormats(); ?>
+<p class="format-list">
+<?php foreach ($formats as $format): ?>
+  <?php if ($translated = $this->transEsc($format)): ?>
+    <span class="format <?=$this->record($this->driver)->getFormatClass($format) ?>"><?=$translated ?></span>
+  <?php endif; ?>
+<?php endforeach; ?>
+</p>
+<?php if (!in_array(\CRL\Module::ONLINE_FORMAT, $formats)): ?>
+  <p><?=$this->transEsc("Note that CRL will often digitize materials when fulfilling borrowing requests")?></p>
+<?php endif; ?>
+

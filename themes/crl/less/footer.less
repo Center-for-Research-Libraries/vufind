@@ -20,7 +20,6 @@ footer {
     padding-left: 0;
 
     li {
-
       &.social-link {
         display: inline-block;
         margin-right: 1em;
@@ -31,7 +30,12 @@ footer {
         color: @white;
         text-decoration: none;
 
-        &:hover {
+        &:focus {
+          color: @white;
+        }
+
+        &:hover,
+        &:focus {
           text-decoration: underline;
         }
       }
@@ -85,7 +89,7 @@ footer {
 
   & h4 {
     margin: 0 0 10px;
-    color: #fff;
+    color: @white;
   }
 
   & .icon {

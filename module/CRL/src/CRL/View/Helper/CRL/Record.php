@@ -2,7 +2,7 @@
 /**
  * Record driver view helper
  */
-namespace CRL\View\Helper\Root;
+namespace CRL\View\Helper\CRL;
 
 use VuFind\Cover\Router as CoverRouter;
 
