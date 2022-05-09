@@ -358,10 +358,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var el = document.getElementById('Illiad_arrow');
 
   el.addEventListener('click', function () {
-    console.log("el", el);
     var e = document.getElementById("CRL_member_ILL_form_link_list");
     var link = e.value;
-    console.log('link:', link);
     window.open(link, '_blank');
   }, false);
 
