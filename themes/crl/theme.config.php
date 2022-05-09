@@ -4,6 +4,9 @@ return [
     'css' => [
       'compiled.css',
     ],
+    'js' => [
+      'script.js'
+    ],
     'less' => array(
       'active' => false,
       'compiled.less'
