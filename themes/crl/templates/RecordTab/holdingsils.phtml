@@ -37,7 +37,7 @@
 <?=($offlineMode == "ils-offline") ? $this->render('Helpers/ils-offline.phtml', ['offlineModeMsg' => 'ils_offline_holdings_message']) : ''?>
 
 <?php if (!$this->driver->isOnline()): ?>
-  <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>" class="toolbar-btn" style="float:right;" data-lightbox=""><?=$this->transEsc('Borrow this resource')?></a>
+  <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>" class="toolbar-btn" style="float:right; margin:0px 0px 20px 20px;" data-lightbox=""><?=$this->transEsc('Borrow this resource')?></a>
 <?php endif; ?>
 
 <?php if (!empty($urls) || $openUrlActive || $doiActive): ?>
@@ -158,8 +158,8 @@
 <?php
 // Show message for special case when we don't have holdings data to show, but
 // may still have holdings at CRL
-if (empty($holdings['holdings'] || !$total_items)): ?>
-      
+if (!$this->driver->isOnline() && (empty($holdings['holdings']) || $total_items === 0)): ?>
+  <p>Holding details for this resource are not currently available, but borrowing requests may still be submitted.</p>
 <?php endif; ?>
 
 <?php if (!empty($holdings['total']) && $paginator = $this->tab->getPaginator($holdings['total'], $holdings['page'], $holdings['itemLimit'])): ?>
