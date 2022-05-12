@@ -5,6 +5,19 @@
   original select/options preserved in top_logo_CRL_member_ILL_form_link_list.20210125.html:
 */
 function fill_CRL_member_ILL_form_link_list() {
+  
+  var el = document.getElementById('Illiad_arrow');
+
+  el.addEventListener('click', function () {
+    var e = document.getElementById("CRL_member_ILL_form_link_list");
+    var link = e.value;
+    // If we are in a lightbox, close it before directing the user to the
+    // new window.
+    if (VuFind.lightbox !== 'undefined') {
+      VuFind.lightbox.close();
+    }
+    window.open(link, '_blank');
+  }, false);
 
   var select = document.getElementById('CRL_member_ILL_form_link_list');
   /*
@@ -350,19 +363,3 @@ function fill_CRL_member_ILL_form_link_list() {
   console.info('crlFunctions, fill_CRL_member_ILL_form_link_list, member_names_and_links.length:', member_names_and_links.length );
 } /* end fill_CRL_member_ILL_form_link_list
 *******************************************************************************/
-
-
-
-document.addEventListener("DOMContentLoaded", function(event) {
-
-  var el = document.getElementById('Illiad_arrow');
-
-  el.addEventListener('click', function () {
-    var e = document.getElementById("CRL_member_ILL_form_link_list");
-    var link = e.value;
-    window.open(link, '_blank');
-  }, false);
-
-  //do work
-  fill_CRL_member_ILL_form_link_list()
-});

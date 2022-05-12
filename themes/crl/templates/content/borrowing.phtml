@@ -7,13 +7,14 @@
 
   <p><strong>Interlibrary loan workflows and related functionality will be enabled in a future platform release.</strong></p>
   <br/><br/>
+  
 
 	<div class="block" id="Illiad_div">
 		<!--2016-10-17 new section per AW-->
 		<h4>Request CRL Items from your library</h4>
 		<p>
 			Via Member ILL form:
-			<select name="CRL_member_ILL_form_link_list" id="CRL_member_ILL_form_link_list" class="CRL_member_ILL_form_link_list"></select>
+			<select name="CRL_member_ILL_form_link_list" id="CRL_member_ILL_form_link_list" class="CRL_member_ILL_form_link_list" style="max-width: 100%;"></select>
 			<button id="Illiad_arrow" alt="Open ILL form for the chosen CRL member" type="button" name="button">Go</button>
 		</p>
 		<div class="boxfoot">
@@ -21,3 +22,12 @@
 		</div>
 	</div>
 </div>
+
+<?php
+// If this content is being loaded in a lightbox we need to trigger the
+// list build JS inline. Unfortunatly inline JS may be needed here as it does
+// not look like there is an event triggered when lightox is opened ?>
+<script type="text/javascript">
+  fill_CRL_member_ILL_form_link_list();
+</script>
+
