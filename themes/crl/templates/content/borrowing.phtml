@@ -23,8 +23,9 @@
 <?php
 // If this content is being loaded in a lightbox we need to trigger the
 // list building JS inline. Unfortunatly inline JS may be needed here as it does
-// not look like there is an event triggered when lightox is opened ?>
-<script type="text/javascript">
-  fill_CRL_member_ILL_form_link_list();
-</script>
-
+// not look like there is an event triggered when lightox is opened.
+$script = <<<JS
+  $(document).ready(fill_CRL_member_ILL_form_link_list());
+JS;
+echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+?>
