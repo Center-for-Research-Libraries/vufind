@@ -37,7 +37,7 @@
 <?=($offlineMode == "ils-offline") ? $this->render('Helpers/ils-offline.phtml', ['offlineModeMsg' => 'ils_offline_holdings_message']) : ''?>
 
 <?php if (!$this->driver->isOnline()): ?>
-  <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>" class="toolbar-btn" style="float:right; margin:0px 0px 20px 20px;" data-lightbox=""><?=$this->transEsc('Borrow this resource')?></a>
+  <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>" class="toolbar-btn" data-lightbox=""><?=$this->transEsc('Borrow this resource')?></a>
 <?php endif; ?>
 
 <?php if (!empty($urls) || $openUrlActive || $doiActive): ?>
@@ -64,7 +64,7 @@
       <br/>
   <?php foreach ($holdings['holdings'] ?? [] as $holding): ?>
 
-      
+
     <?php if (!empty($holding['textfields'])): ?>
       <?php foreach ($holding['textfields'] ?? [] as $textFieldName => $textFields): ?>
         <h3><?=$textFieldName == 'summary' ? $this->transEsc("Volume Holdings") : $this->transEsc(ucfirst($textFieldName))?></h3>
@@ -73,7 +73,7 @@
         <?php endforeach; ?>
       <?php endforeach; ?>
     <?php endif; ?>
-      
+
 
     <?php if (!empty($holding['items'])): ?>
       <?php $total_items++; ?>
@@ -155,13 +155,13 @@
   <?php endforeach; ?>
 
 <?php endif; ?>
-      
+
 <?php
 // Show message for special case when we don't have holdings data to show, but
 // may still have holdings at CRL.
 // Removed until collection holdings are better finalized in FOLIO.
 // if (!$this->driver->isOnline() && (empty($holdings['holdings']) || $total_items === 0)): ?>
-      
+
 <?php // endif; ?>
 
 <?php if (!empty($holdings['total']) && $paginator = $this->tab->getPaginator($holdings['total'], $holdings['page'], $holdings['itemLimit'])): ?>
