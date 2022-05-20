@@ -1,7 +1,7 @@
 <?php $account = $this->auth()->getManager(); ?>
 <div class="banner container navbar">
   <div class="navbar-header">
-    <h1 class="page-title">CRL Online Catalog</h1>
+    <a class="page-title" href="<?=$this->url('home')?>">CRL Online Catalog</a>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-collapse" aria-hidden="true">
       <i class="fa fa-bars"></i>
     </button>
@@ -79,7 +79,7 @@
         <?php endif; ?>
       </ul>
     </nav>
-    <a class="navbar-brand lang-<?=$this->layout()->userLang ?>" href="<?=$this->url('home')?>">
+    <a class="navbar-brand lang-<?=$this->layout()->userLang ?>" href="https://www.crl.edu/">
       <img class="navbar-brand--logo" src="<?=$this->imageLink('logo.svg'); ?>" alt="Center for Research Libraries" />
       <img class="navbar-brand--logo--small" src="<?=$this->imageLink('crl_brandmark.png'); ?>" alt="Center for Research Libraries" />
     </a>
