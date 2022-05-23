@@ -89,6 +89,24 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         }
         return false;
     }
+    
+    /**
+     * Determine whether a record is a CRL JSTOR.
+     *
+     * @param Record record
+     * @return boolean
+     */
+    protected boolean isJSTOR(Record record) {
+        DataField callNum = (DataField) record.getVariableField("099");
+        if (callNum != null) {
+            if (callNum.getSubfield('a') != null) {
+                if (callNum.getSubfield('a').getData().contains("JSTOR")) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     /**
      * Return the best format string based on bib level in leader; return
@@ -168,6 +186,10 @@ public class FormatCalculatorCRL extends org.vufind.index.FormatCalculator
         // Custom CRL check for dissertation.
         if (isDissertation(record)) {
           result.add("Dissertation");
+        }
+        // Custom CRL check for JSTOR.
+        if (isJSTOR(record)) {
+          result.add("JSTOR");
         }
         if (isConferenceProceeding(record)) {
             result.add("ConferenceProceeding");

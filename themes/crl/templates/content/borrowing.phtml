@@ -1,10 +1,33 @@
-<?php $this->headTitle($this->translate('Borrowing from CRL')); ?>
+<div class="crl-borrowing">
+  <?php $this->headTitle($this->translate('Borrowing from CRL')); ?>
 
-<div class="crl-borrowing">  
-  <h1><?=$this->transEsc('Borrowing from CRL') ?></h1>
 
-  <p>Scholars and researchers from CRL member institutions have free and unlimited use of the CRL collections through Interlibrary loan.</p>
+    <h1><?=$this->transEsc('Borrowing from CRL') ?></h1>
 
-  <p><strong>Interlibrary loan workflows and related functionality will be enabled in a future platform release.</strong></p>
-  <br/><br/>
+    <p>
+      Scholars and researchers from CRL member libraries have use of the CRL collections, at no charge, through interlibrary loan. The loan period is unlimited, but materials may be subject to recall after a certain period if  a scholar at another CRL institution requests the materials. Global Member libraries have full access to digitized CRL collections, and can pay for shipping of loaned items. Researchers at institutions outside the CRL library community may use the collections for a prepaid fee, subject to certain limitations.
+      <a class="more" href="http://www.crl.edu/services/borrowing/" target="_blank">Learn more about CRL lending</a>.
+    </p>
+
+  	<div id="Illiad_div">
+  		<h3>Request Items from Your Member Library</h3>
+  		<p>
+  			Via Member ILL form:
+  			<select name="CRL_member_ILL_form_link_list" id="CRL_member_ILL_form_link_list" class="CRL_member_ILL_form_link_list" style="max-width: 100%;"></select>
+  			<button id="Illiad_arrow" alt="Open ILL form for the chosen CRL member" type="button" name="button">Go</button>
+  		</p>
+  		<div class="boxfoot">
+
+  		</div>
+  	</div>
+
+  <?php
+  // If this content is being loaded in a lightbox we need to trigger the
+  // list building JS inline. Unfortunatly inline JS may be needed here as it does
+  // not look like there is an event triggered when lightox is opened.
+  $script = <<<JS
+    $(document).ready(fill_CRL_member_ILL_form_link_list());
+  JS;
+  echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+  ?>
 </div>
