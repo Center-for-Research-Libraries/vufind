@@ -23,7 +23,7 @@ class SolrMarc extends \VuFind\RecordDriver\SolrMarc
     public function isOnline()
     {
         $formats = (array)($this->fields['format'] ?? []);
-        return (array_search("Online Access", $formats) !== FALSE);
+        return (array_search(\CRL\Module::ONLINE_FORMAT, $formats) !== FALSE);
     }
 
 }

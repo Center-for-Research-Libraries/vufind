@@ -2,7 +2,7 @@
 /**
  * Record driver data formatting view helper
  */
-namespace CRL\View\Helper\Root;
+namespace CRL\View\Helper\CRL;
 
 use Laminas\View\Helper\AbstractHelper;
 use VuFind\RecordDriver\AbstractBase as RecordDriver;

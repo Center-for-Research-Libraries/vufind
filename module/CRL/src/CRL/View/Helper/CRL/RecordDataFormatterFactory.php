@@ -1,6 +1,6 @@
 <?php
 
- namespace CRL\View\Helper\Root;
+ namespace CRL\View\Helper\CRL;
 
  use VuFind\View\Helper\Root\RecordDataFormatter\SpecBuilder;
 
