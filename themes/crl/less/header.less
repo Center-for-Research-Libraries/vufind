@@ -1,12 +1,12 @@
 .page-title {
   font-size: 1.5rem;
   position: absolute;
-  top: .75rem;
-
+  top: 2.5rem;
   @media @tablet {
+    top: 0.75rem;
     font-size: 3rem;
     font-weight: 300;
-    margin-top: 45px;
+    margin-top: 25px;
   }
 
   &:hover {
@@ -15,7 +15,7 @@
 }
 
 .navbar-brand {
-  margin: 0 0 0 auto;
+  margin: 25px 0 15px auto;
   padding-top: 0;
   float: right;
   height: max-content;
@@ -28,7 +28,6 @@
 
 .navbar-brand--logo {
   display: none !important;
-
   @media @tablet {
     display: block !important;
     width: 300px;
@@ -39,43 +38,86 @@
 .navbar-brand--logo--small {
   display: block !important;
   width: 50px;
-
   @media @tablet {
     display: none !important;
   }
 }
 
+#header-collapse {
+  @media @mobile-only {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: none;
+  }
+}
 
 .secondary-nav {
   background-color: @brand-primary;
   margin-bottom: 45px;
+  box-shadow: @crl-box-shadow;
+
+  .navbar-toggle {
+    color: @white;
+  }
 
   ul {
-    display: flex;
-    justify-content: flex-end;
     margin-bottom: 0;
     list-style-type: none;
 
-    li {
-      padding: 1rem;
+    &.navbar-right {
+      @media @mobile-only {
+        margin-top: 0;
+      }
+    }
+    // Override bootstrap default #eee that appears everywhere.
+    > .open > a:focus,
+    .open > a,
+    > .open > a:hover {
+      color: @brand-primary;
+      background-color: @white;
+    }
+    // For language selector in nav.
+    .dropdown-menu {
+      > .active > a {
+        color: @white;
+        background-color: @brand-primary;
+      }
 
+      li a {
+        color: @white;
+        @media @tablet {
+          color: @brand-primary;
+        }
+      }
+    }
+
+    li {
       a {
         color: @white;
+
+        &:hover {
+          outline: 0;
+        }
+
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+          color: @crl-blue;
+          background-color: @white;
+        }
       }
     }
   }
 }
-
 // Undo bootstrap negative margins.
-.container>.navbar-header {
+
+.container > .navbar-header {
   margin-right: initial;
   margin-left: initial;
 }
 
-
 .catalog-header {
   display: none;
-
   @media @tablet {
     display: block;
     position: absolute;
@@ -94,7 +136,6 @@
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 1.25rem;
-
   @media @tablet {
     display: none;
   }
