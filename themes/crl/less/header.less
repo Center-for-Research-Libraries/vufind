@@ -85,6 +85,11 @@
 
       li a {
         color: @white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
         @media @tablet {
           color: @brand-primary;
         }
@@ -101,7 +106,6 @@
 
         &:focus,
         &:hover {
-          text-decoration: underline;
           color: @crl-blue;
           background-color: @white;
         }
