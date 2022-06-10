@@ -79,12 +79,12 @@
       <h3><?=$this->transEsc("Item List")?></h3>
       <table class="table table-striped">
       <th><?=$this->transEsc("Description")?></th>
-      <th><?=$this->transEsc("Call Number")?></th>
+      <th><?=$this->transEsc("Local Call Number")?></th>
       <th><?=$this->transEsc("Status")?></th>
       <?php
       // Sort items by volume for a more friendly display
       $keys = array_column($holding['items'], 'volume');
-      array_multisort($keys, SORT_ASC, $holding['items']);
+      array_multisort($keys, SORT_ASC, SORT_NATURAL, $holding['items']);
       ?>
       <?php foreach ($holding['items'] as $row): ?>
       <tr vocab="http://schema.org/" typeof="Offer">
