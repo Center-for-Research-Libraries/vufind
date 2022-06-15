@@ -1,10 +1,14 @@
 # About the CRL Online Catalog
 
-## New Catalog Preview
+## New Catalog Launch
 
-This website is Beta preview of the platform that will replace [catalog.crl.edu](http://catalog.crl.edu). Like any pre-release software, it is incomplete and may contain bugs.
+CRL launched this new Online Catalog in June, 2022. The new catalog is powered by VuFind, an open-source resource portal built by, and for, the library community. VuFind works with FOLIO to deliver an enhanced discovery experience. CRL’s technical teams and discovery experts have customized VuFind to preserve popular collection navigation scopes and familiar CRL features with VuFind modernizations, such as advanced faceting.
 
-CRL's new online catalog will be powered by [FOLIO](https://www.folio.org/) and [VuFind](http://vufind.org/). This Beta release demonstrates these two systems working together to deliver an improved online discovery experience for CRL's collective collections.  
+[Learn more](https://www.crl.edu/news/crl-implements-new-library-service-platform-and-catalog) about CRL New Library Service Platform and Catalog.
+
+## Legacy Catalog Access
+
+CRL's [legacy catalog](http://catalog-old.crl.edu) will remain available for a limited time as a courtesy to patrons making the transition to this new discovery experience.
 
 ## Feedback
 
