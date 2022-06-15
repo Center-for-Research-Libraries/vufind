@@ -1,6 +1,32 @@
 <?php
 
 return [
+    'controllers' => [
+        'factories' => [
+            'CRL\Controller\RedirectController' => 'VuFind\Controller\AbstractBaseFactory',
+        ],
+        'aliases' => [
+            'Redirect' => 'CRL\Controller\RedirectController',
+        ],
+    ],
+    'router' => [
+        'routes' => [
+            'legacy-redirect' => [
+                'type'    => 'Laminas\Router\Http\Segment',
+                'options' => [
+                    'route'    => '/redirect/:type/:id',
+                    'constraints' => [
+                        'type'     => '[a-zA-Z0-9]+',
+                        'id'     => '[a-zA-Z0-9]+',
+                    ],
+                    'defaults' => [
+                        'controller' => 'Redirect',
+                        'action'     => 'redirect',
+                    ]
+                ],
+            ],
+        ],
+    ],
     'vufind' => [
         'plugin_managers' => [
             'ils_driver' => [
