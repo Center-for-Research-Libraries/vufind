@@ -1,0 +1,52 @@
+<div class="crl-borrowing">
+  <?php $this->headTitle($this->translate('Accessing the CRL Collection')); ?>
+
+
+    <h1><?=$this->transEsc('Accessing the CRL Collection') ?></h1>
+    
+    <h3>Borrowing from CRL</h3>
+
+    <p>
+      Scholars and researchers from CRL member libraries have access to CRL collections without charge through interlibrary loan, <a href="http://ddsnext.crl.edu/">digitized CRL collections</a> or by appointment in our <a href="https://www.crl.edu/services/reading-room">reading room</a>. Non-members have limited access to the collection for a fee. Loan periods are unlimited, but materials are subject to recall if another CRL institution requests the materials. Global Member libraries have full access to digitized CRL collections, and microforms. Libraries outside the CRL library community may <a href="https://www.crl.edu/services/borrowing/non-member-lending">borrow</a> on behalf of researchers for a prepaid fee, subject to certain limitations. <a href="https://www.crl.edu/services/lending">Learn more about CRL lending</a>.
+    </p>
+
+  	<div id="Illiad_div">
+  		<strong>Request Items from Your Member Library</strong>
+  		<p>
+  			Via Member ILL form:
+  			<select name="CRL_member_ILL_form_link_list" id="CRL_member_ILL_form_link_list" class="CRL_member_ILL_form_link_list" style="max-width: 100%;"></select>
+  			<button id="Illiad_arrow" alt="Open ILL form for the chosen CRL member" type="button" name="button">Go</button>
+  		</p>
+  		<div class="boxfoot">
+
+  		</div>
+  	</div>
+
+  <?php
+  // If this content is being loaded in a lightbox we need to trigger the
+  // list building JS inline. Unfortunatly inline JS may be needed here as it does
+  // not look like there is an event triggered when lightox is opened.
+  $script = <<<JS
+    $(document).ready(fill_CRL_member_ILL_form_link_list());
+  JS;
+  echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+  ?>
+    
+  <h3>Digitization</h3>
+  
+  <p>Through CRL's Digitize on Demand service, CRL member libraries may request digitization of most individual titles, volumes, or microform reels. Requests take approximately ten working days to complete. Scans are accessed and downloadable in PDF format through <a href="http://ddsnext.crl.edu/">CRL's digital delivery platform</a>.</p>
+  <p>To request digitization of material member libraries can submit an Interlibrary Loan request to CRL.
+  <ul>
+    <li>Scans are searchable whenever the source material supports OCR processing.</li>
+    <li>CRL will digitize longer runs with advance notice to meet research or instruction needs. We reserve the right to restrict the number of items digitized within a time period to ensure other CRL members receive equal service levels.</li>
+    <li>All digitized items are retained on our digital delivery platform for future consultation by the CRL scholarly community.</li>
+    <li>Depending on copyright, digitized material are made available for open access.</li>
+    <li>CRL scans to provide copies for research purposes. We do not supply high-resolution image reproductions for publication or commercial uses.</li>
+  </ul>
+  <p>For those with accessibility issues, please contact us to arrange for digitization.</p>
+  
+  <h3>Research Help</h3>
+  
+  <p>A Reference Consultation can help you identify material in our collection that is relevant to your research topic. Anyone can contact CRL's <a href="mailto://asd@crl.edu">Access Initiatives and Collections Care Department</a>. We will help guide research and supply additional finding aids as needed.</p>
+  <p>CRL offers an Accessible Text Request Service to users who are affiliated with our member universities or libraries. Through this service, users who are blind or print-disabled can request digital copies of copyrighted books. Requests for copyrighted books should be made to the ILL Department at your university or library.</p>
+</div>
