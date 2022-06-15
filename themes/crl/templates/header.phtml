@@ -1,8 +1,8 @@
 <?php $account = $this->auth()->getManager(); ?> <div class="banner container navbar">
 	<div class="navbar-header">
 		<a class="page-title" href="
-			<?=$this->url('home')?>">CRL Library Catalog</a>
-	</div> <?php if (!isset($this->layout()->renderingError)): ?> <div class="nav-area">
+			<?=$this->url('home')?>">CRL Online Catalog </a>
+	</div> <div class="nav-area">
 		<a class="navbar-brand lang-
 			<?=$this->layout()->userLang ?>" href="https://www.crl.edu/">
 			<img class="navbar-brand--logo" src="
@@ -10,7 +10,7 @@
 			<img class="navbar-brand--logo--small" src="
 					<?=$this->imageLink('crl_brandmark.png'); ?>" alt="Center for Research Libraries" />
 		</a>
-	</div> <?php endif; ?>
+	</div>
 </div>
 <div class="secondary-nav">
 	<div class="container">
