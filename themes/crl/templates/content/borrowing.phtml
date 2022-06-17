@@ -1,16 +1,14 @@
 <div class="crl-borrowing">
   <?php $this->headTitle($this->translate('Borrowing from CRL')); ?>
 
-
     <h1><?=$this->transEsc('Borrowing from CRL') ?></h1>
 
     <p>
-      Scholars and researchers from CRL member libraries have use of the CRL collections, at no charge, through interlibrary loan. The loan period is unlimited, but materials may be subject to recall after a certain period if  a scholar at another CRL institution requests the materials. Global Member libraries have full access to digitized CRL collections, and can pay for shipping of loaned items. Researchers at institutions outside the CRL library community may use the collections for a prepaid fee, subject to certain limitations.
-      <a class="more" href="http://www.crl.edu/services/borrowing/" target="_blank">Learn more about CRL lending</a>.
+      Scholars and researchers from CRL member libraries have access to CRL collections without charge through interlibrary loan, <a href="http://ddsnext.crl.edu/" data-lightbox-ignore="">digitized CRL collections</a> or by appointment in our <a href="https://www.crl.edu/services/reading-room" data-lightbox-ignore="">reading room</a>. Non-members have limited access to the collection for a fee. Loan periods are unlimited, but materials are subject to recall if another CRL institution requests the materials. Global Member libraries have full access to digitized CRL collections and microforms. Libraries outside the CRL library community may <a href="https://www.crl.edu/services/borrowing/non-member-lending" data-lightbox-ignore="">borrow</a> on behalf of researchers for a prepaid fee, subject to certain limitations. <a href="https://www.crl.edu/services/lending" data-lightbox-ignore="">Learn more about CRL lending</a>.
     </p>
 
   	<div id="Illiad_div">
-  		<h3>Request Items from Your Member Library</h3>
+  		<strong>Request Items from Your Member Library</strong>
   		<p>
   			Via Member ILL form:
   			<select name="CRL_member_ILL_form_link_list" id="CRL_member_ILL_form_link_list" class="CRL_member_ILL_form_link_list" style="max-width: 100%;"></select>
@@ -30,4 +28,5 @@
   JS;
   echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
   ?>
+
 </div>

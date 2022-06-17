@@ -79,12 +79,12 @@
       <h3><?=$this->transEsc("Item List")?></h3>
       <table class="table table-striped">
       <th><?=$this->transEsc("Description")?></th>
-      <th><?=$this->transEsc("Call Number")?></th>
+      <th><?=$this->transEsc("Local Call Number")?></th>
       <th><?=$this->transEsc("Status")?></th>
       <?php
       // Sort items by volume for a more friendly display
       $keys = array_column($holding['items'], 'volume');
-      array_multisort($keys, SORT_ASC, $holding['items']);
+      array_multisort($keys, SORT_ASC, SORT_NATURAL, $holding['items']);
       ?>
       <?php foreach ($holding['items'] as $row): ?>
       <tr vocab="http://schema.org/" typeof="Offer">
@@ -121,8 +121,9 @@
                 <a class="<?=$checkILLRequest ? 'checkILLRequest ' : ''?>placeILLRequest" data-lightbox href="<?=$this->escapeHtmlAttr($this->recordLinker()->getRequestUrl($row['ILLRequestLink']))?>"><i class="fa fa-flag" aria-hidden="true"></i>&nbsp;<?=$this->transEsc($checkILLRequest ? "ill_request_check_text" : "ill_request_place_text")?></a>
               <?php endif; ?>
             <?php else: ?>
-              <?php /* Begin Unavailable Items (Recalls) */ ?>
-              <span class="text-danger"><?=$this->transEsc($row['status'])?><link property="availability" href="http://schema.org/OutOfStock" /></span>
+              <?php /* Begin Unavailable Items (Recalls) 
+                       Note that $row['status'] contains raw status from ILS */ ?>
+              <span class="text-danger"><?=$this->transEsc("Available by Request")?><link property="availability" href="http://schema.org/OutOfStock" /></span>
               <?php if ($row['returnDate'] ?? false): ?>&ndash; <span class="small"><?=$this->escapeHtml($row['returnDate'])?></span><?php endif; ?>
               <?php if ($row['duedate'] ?? false): ?>
                 &ndash; <span class="small"><?=$this->transEsc("Due")?>: <?=$this->escapeHtml($row['duedate'])?></span>

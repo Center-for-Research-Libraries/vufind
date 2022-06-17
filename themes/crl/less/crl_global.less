@@ -5,7 +5,6 @@ body {
   color: #222;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
-
 // Base typography.
 a {
   color: @crl-blue-darken;
@@ -67,12 +66,10 @@ a.edit {
     color: @brand-primary;
   }
 }
-
 // No colons.
 span.field-colon {
   display: none;
 }
-
 
 label {
   color: #3c4043;
@@ -106,7 +103,6 @@ label {
     padding-left: 0;
   }
 }
-
 // Bootstrap 3 Borderless Table.
 .table-borderless > tbody > tr > td,
 .table-borderless > tbody > tr > th,
@@ -116,14 +112,12 @@ label {
 .table-borderless > thead > tr > th {
   border: none;
 }
-
 // Modifies Bootstrap 3 Striped Table.
 .table-striped {
   border-left: 1px solid @border-line;
   border-right: 1px solid @border-line;
   border-bottom: 1px solid @border-line;
 }
-
 // Temporary alert notifcation.
 .temporary-notification {
   background: @crl-blue-lighten;
@@ -136,7 +130,6 @@ label {
     text-decoration: underline;
   }
 }
-
 // Styles for temporary about area.
 .crl-borrowing,
 .template-name-markdown #content {
@@ -163,8 +156,7 @@ label {
   }
 }
 
-
-.dropdown-menu>.active>a {
+.dropdown-menu > .active > a {
   background-color: @crl-blue-lighten;
 
   &:hover {
@@ -175,4 +167,16 @@ label {
 h1 + .title-alt {
   margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+// Alerts.
+.alert-danger {
+  border-color: transparent;
+  padding: 0;
+  background-color: @white;
+  color: #8a211e;
+
+  &:hover {
+    color: #8a211e;
+  }
 }

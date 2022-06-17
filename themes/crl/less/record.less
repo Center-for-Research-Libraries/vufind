@@ -29,6 +29,16 @@
 
 // Record table style.
 .record {
+  .subject-line {
+    &:hover {
+      color: @crl-blue-lighten;
+    }
+    a:hover~a {
+      color: @crl-blue-lighten;
+      text-decoration: none;
+    }
+  }
+
   a {
     color: @crl-blue;
   }
