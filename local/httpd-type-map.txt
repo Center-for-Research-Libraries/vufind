@@ -1,0 +1,5 @@
+o oclc_num
+i ISN
+t Title
+a Author
+d Subject
