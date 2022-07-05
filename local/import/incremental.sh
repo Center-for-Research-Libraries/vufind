@@ -1,6 +1,27 @@
 #
 # A helper script to automatically import bib and authorities
 
+echo
+echo
+echo "This script will perform an incremental harvest from FOLIO without clearing any existing solr data."
+echo
+echo "IMPORTANT. In production this script should be run as the user who owns the codebase and the solr process (www-admin). Running this as any other user can case problems with file permissions or may lead to parts of the script failing."
+echo
+echo "You are currently acting as user:"
+whoami
+echo
+if [ $USER != 'www-admin' ]
+  then
+    read -r -p "Do you want to continue without switching to the www-admin user (this may only be safe in dev environments)? [y/N] " response
+    if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+    then
+      echo
+    else
+      echo "Aborting"
+      exit 0
+    fi
+fi
+
 # Redirect stdout ( > ) into a named pipe ( >() ) running "tee"
 #exec > >(tee -i logfile.txt)
 #exec 2>&1
@@ -31,8 +52,8 @@ php "$VUFIND_HOME"/util/optimize.php
 
 # wait for solr to start
 echo
-echo "Restarting solr index (sudo password may be required)..."
-su - "$VUFIND_SOLR_USER" -c '"$VUFIND_HOME"/solr.sh stop'
+echo "Restarting solr index..."
+"$VUFIND_HOME"/solr.sh stop
 "$VUFIND_HOME"/solr.sh restart
 
 # create browse index
