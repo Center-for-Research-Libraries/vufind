@@ -32,6 +32,13 @@
             null,
             ['recordLink' => 'title']
         );
+        $spec->setLine(
+            'OCLC',
+            'getOCLC',
+            null,
+            ['itemPrefix' => '<span property="oclc">',
+             'itemSuffix' => '</span>']
+        );
         $spec->setMultiLine(
             'Authors',
             'getDeduplicatedAuthors',
