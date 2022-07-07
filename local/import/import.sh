@@ -19,8 +19,7 @@ else
 fi
 echo "IMPORTANT. In production this script should be run as the user who owns the codebase and the solr process (www-admin). Running this as any other user can case problems with file permissions or may lead to parts of the script failing."
 echo
-echo "You are currently acting as user:"
-whoami
+echo "You are currently acting as user: $USER"
 echo
 if [ $USER != 'www-admin' ]
   then
