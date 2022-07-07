@@ -2,7 +2,15 @@
   $user = $this->auth()->isLoggedIn();
   $patron = $user ? $this->auth()->getILSPatron() : false;
   $capabilityParams = $patron ? ['patron' => $patron] : [];
-  $ilsOnline = ('ils-none' !== $this->ils()->getOfflineMode());
+
+  // CRL customization
+  // Decalre that the ILS sytem is offline just for the purposes of this page.
+  // This will disable all menu items that depend on user interaction with the
+  // ILS directly (view holds, fines, checked-out items, etc.). Becuase we do
+  // not track individual users in FOLIO we also do not allow direct interaction
+  // with user-specific states and features in VuFind.
+  $ilsOnline = FALSE;
+  
 ?>
 <button class="close-offcanvas btn btn-link" data-toggle="offcanvas"><?=$this->transEsc('navigate_back') ?></button>
 <h3><?=$this->transEsc('Your Account')?></h3>
