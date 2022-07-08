@@ -1,0 +1,17 @@
+v1.0.1, 2022-07-07
+------------------
+
+This release includes minor interface and bug fixes.
+
+- Issue #139: Restore OCLC number display on record entries for constancy with previous catalog.
+- Issue #133: Fix outgoing email handling (MTA) and re-enable user actions that depend on email (pass resets, record sharing, etc).
+- Issue #132: Ongoing improvements to URL redirects to route more types legacy bookmarks and incoming links.
+- Issue #22: Finalize the automation of FOLIO harvest scripts with improved handling for dev environments.
+- Issue #136: Fix link targets in modal ILL instruction page.
+- Issue #110: Fix/remove menu items from user account pages that are inactive for CRL's catalog.
+
+
+v1.0.0, 2022-06-15
+------------------
+
+Initial public release
