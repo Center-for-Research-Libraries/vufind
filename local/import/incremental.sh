@@ -12,7 +12,7 @@ echo
 if [ $USER != 'www-admin' ]
   then
     read -r -p "Do you want to continue without switching to the www-admin user (this may only be safe in dev environments)? [y/N] " response
-    if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+    if [[ "$response" =~ ^[yY][eE][sS]|[yY]$ ]]
     then
       echo
     else
