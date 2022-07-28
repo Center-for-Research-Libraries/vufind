@@ -41,6 +41,7 @@ public class AMPCalculatorCRL
    * @return set of record formats
    */
   public Set<String> getAMPS(final Record record) {
+    // Extract all codes from the 049
     List<String> result = new ArrayList<String>();
     DataField lc = (DataField) record.getVariableField("049");
     if (lc != null) {
@@ -53,7 +54,10 @@ public class AMPCalculatorCRL
 
       }
     }
-    // The 952 can have many values
+    
+    /**** Skip 952 lookups for now
+    // Also look into the 952i, which is where FOLIO stashes indivudal item
+    // Material Types
     DataField conference2 = (DataField) null;
     List items = record.getVariableFields("952");
     Iterator itemsIter = items.iterator();
@@ -65,6 +69,8 @@ public class AMPCalculatorCRL
         }
       }
     }
+    */
+    
     // Deduplicate list by converting to set:
     return new LinkedHashSet<String>(result);
   }
