@@ -139,6 +139,7 @@
    <field name="crl_program_item" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="crl_program_mil" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="crl_program" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="crl_program_alt" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="author" type="textProper" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="author_lnk" type="textProper" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="author_variant" type="text" indexed="true" stored="true" multiValued="true" termVectors="true"/>
