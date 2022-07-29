@@ -51,14 +51,11 @@ public class AMPCalculatorCRL
         while (m.find()) {
           result.add(m.group());
         }
-
       }
     }
     
-    /**** Skip 952 lookups for now
-    // Also look into the 952i, which is where FOLIO stashes indivudal item
+    // Also look into the 952i, which is where FOLIO stashes individual item
     // Material Types
-    DataField conference2 = (DataField) null;
     List items = record.getVariableFields("952");
     Iterator itemsIter = items.iterator();
     if (items != null) {
@@ -69,7 +66,28 @@ public class AMPCalculatorCRL
         }
       }
     }
-    */
+    
+    // Also look into the 998a, which is where CRL stashed Mil location codes
+    List mils = record.getVariableFields("998");
+    Iterator milsIter = mils.iterator();
+    if (mils != null) {
+      if (milsIter.hasNext()) {
+        DataField mil = (DataField) milsIter.next();
+        if (mil.getSubfield('a') != null) {
+          String milResult = mil.getSubfield('a').getData().toLowerCase();
+          // The "crlm" mil location code is a special case that we want to
+          // exclue. Though it is a valid value here it collides with any 049
+          // values of "crlm" (a 049 "crlm" signals "SEAM", but a 998 "crlm"
+          // signals a CRL Monograph). As we are only interested in AMP codes,
+          // and map eveything in one amp_map.properites map, we have to exclude
+          // this.
+          if (!milResult.equals("crlm")) {
+            result.add(milResult);
+          }
+        }
+      }
+    }
+
     
     // Deduplicate list by converting to set:
     return new LinkedHashSet<String>(result);
