@@ -19,8 +19,8 @@ package edu.crl.index;
  */
 
 import org.marc4j.marc.Record;
-import org.marc4j.marc.ControlField;
 import org.marc4j.marc.DataField;
+import org.marc4j.marc.Subfield;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -41,11 +41,16 @@ public class AMPCalculatorCRL
    * @return set of record formats
    */
   public Set<String> getAMPS(final Record record) {
-    // Extract all codes from the 049
     List<String> result = new ArrayList<String>();
-    DataField lc = (DataField) record.getVariableField("049");
-    if (lc != null) {
+    
+    // Extract all codes from the 049. Note that 049s can be repeated.
+    List lcs = record.getVariableFields("049");
+    Iterator lcsIter = lcs.iterator();
+    while (lcsIter.hasNext()) {
+      DataField lc = (DataField) lcsIter.next();
       if (lc.getSubfield('a') != null) {
+        // Individual 049a's can contain multiple codes in the form "crl*".
+        // We need to extract them all.
         String codes = lc.getSubfield('a').getData().toLowerCase();
         Matcher m = Pattern.compile("(crl[a-z]{1})").matcher(codes);
         while (m.find()) {
@@ -55,39 +60,36 @@ public class AMPCalculatorCRL
     }
     
     // Also look into the 952i, which is where FOLIO stashes individual item
-    // Material Types
+    // Material Types. Note that this is multivalued (one 952 per item)
     List items = record.getVariableFields("952");
     Iterator itemsIter = items.iterator();
-    if (items != null) {
-      if (itemsIter.hasNext()) {
-        DataField item = (DataField) itemsIter.next();
-        if (item.getSubfield('i') != null) {
-          result.add(item.getSubfield('i').getData().toLowerCase());
-        }
+    while (itemsIter.hasNext()) {
+      DataField item = (DataField) itemsIter.next();
+      if (item.getSubfield('i') != null) {
+        result.add(item.getSubfield('i').getData().toLowerCase());
       }
     }
     
     // Also look into the 998a, which is where CRL stashed Mil location codes
-    List mils = record.getVariableFields("998");
-    Iterator milsIter = mils.iterator();
-    if (mils != null) {
-      if (milsIter.hasNext()) {
-        DataField mil = (DataField) milsIter.next();
-        if (mil.getSubfield('a') != null) {
-          String milResult = mil.getSubfield('a').getData().toLowerCase();
-          // The "crlm" mil location code is a special case that we want to
-          // exclue. Though it is a valid value here it collides with any 049
-          // values of "crlm" (a 049 "crlm" signals "SEAM", but a 998 "crlm"
-          // signals a CRL Monograph). As we are only interested in AMP codes,
-          // and map eveything in one amp_map.properites map, we have to exclude
-          // this.
-          if (!milResult.equals("crlm")) {
-            result.add(milResult);
-          }
+    DataField mil = (DataField) record.getVariableField("998");
+    if (mil != null) {
+      // The 998a subfield can be multivalued
+      List milSubs = mil.getSubfields('a');
+      Iterator milSubsIter = milSubs.iterator();
+      while (milSubsIter.hasNext()) {
+        Subfield milSub = (Subfield) milSubsIter.next();
+        String milSubResult = milSub.getData().toLowerCase();
+        // "crl*" mil location codes are a special cases that we want to
+        // exclue. Though some crl* values are valid here they may collides with
+        // 049 values. For example a 049 "crlm" signals "SEAM", but a 998 "crlm"
+        // signals a CRL Monograph. As we are only interested in AMP codes,
+        // and map eveything in one amp_map.properites map, we have to exclude
+        // these.
+        if (!milSubResult.contains("crl")) {
+          result.add(milSubResult);
         }
       }
     }
-
     
     // Deduplicate list by converting to set:
     return new LinkedHashSet<String>(result);
