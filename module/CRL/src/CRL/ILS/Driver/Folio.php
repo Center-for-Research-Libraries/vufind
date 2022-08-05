@@ -89,7 +89,12 @@ class Folio extends \VuFind\ILS\Driver\Folio
                     'number' => count($items) + 1,
                     'barcode' => $item->barcode ?? '',
                     'status' => $item->status->name,
-                    'availability' => $item->status->name == 'Available',
+                    // CRL TEMPORARY ADJUSTMENT to mark all items as
+                    // unavailable. This will trigger templates to show
+                    // "Availalbe by Request" everywhere until item status
+                    // data can be finialzed. 
+                    //'availability' => $item->status->name == 'Available',
+                    'availability' => FALSE,
                     'is_holdable' => $this->isHoldable($locationName),
                     'holdings_notes'=> $hasHoldingNotes ? $holdingNotes : null,
                     'item_notes' => !empty(implode($itemNotes)) ? $itemNotes : null,

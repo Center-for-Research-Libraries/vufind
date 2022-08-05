@@ -134,6 +134,7 @@
    <field name="language" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="format" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="crl_scope" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="crl_program" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="author" type="textProper" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="author_lnk" type="textProper" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="author_variant" type="text" indexed="true" stored="true" multiValued="true" termVectors="true"/>
@@ -280,6 +281,8 @@
  <copyField source="format"    dest="allfields_unstemmed"/>
  <copyField source="crl_scope"    dest="allfields"/>
  <copyField source="crl_scope"    dest="allfields_unstemmed"/>
+ <copyField source="crl_program"    dest="allfields"/>
+ <copyField source="crl_program"    dest="allfields_unstemmed"/>
  <copyField source="oclc_num"    dest="allfields"/>
  <copyField source="oclc_num"    dest="allfields_unstemmed"/>
  <!-- CopyFields for call numbers -->

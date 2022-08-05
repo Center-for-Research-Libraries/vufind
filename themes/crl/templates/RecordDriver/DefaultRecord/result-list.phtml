@@ -123,13 +123,13 @@
 
       <div class="callnumAndLocation ajax-availability hidden">
         <?php if ($this->driver->supportsAjaxStatus()): ?>
-          <strong class="hideIfDetailed"><?=$this->transEsc('Call Number')?>:</strong>
+          <strong class="hideIfDetailed"><?=$this->transEsc('Local Call Number')?>:</strong>
           <span class="callnumber ajax-availability hidden">
             <?=$this->transEsc('Loading')?>...<br/>
           </span>
         <?php else: ?>
           <?php $summCallNo = $this->driver->getCallNumber(); if (!empty($summCallNo)): ?>
-            <strong><?=$this->transEsc('Call Number')?>:</strong> <?=$this->escapeHtml($summCallNo)?>
+            <strong><?=$this->transEsc('Local Call Number')?>:</strong> <?=$this->escapeHtml($summCallNo)?>
           <?php endif; ?>
         <?php endif; ?>
       </div>
