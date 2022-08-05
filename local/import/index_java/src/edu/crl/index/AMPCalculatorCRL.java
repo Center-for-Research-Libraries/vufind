@@ -48,10 +48,15 @@ public class AMPCalculatorCRL
     Iterator lcsIter = lcs.iterator();
     while (lcsIter.hasNext()) {
       DataField lc = (DataField) lcsIter.next();
-      if (lc.getSubfield('a') != null) {
+      // It's unlikly to have multiple 049a subfields, but allow for it to be
+      // forward compatible.
+      List lcSubs = lc.getSubfields('a');
+      Iterator lcSubsIter = lcSubs.iterator();
+      while (lcSubsIter.hasNext()) {
+        Subfield lcSub = (Subfield) lcSubsIter.next();
         // Individual 049a's can contain multiple codes in the form "crl*".
         // We need to extract them all.
-        String codes = lc.getSubfield('a').getData().toLowerCase();
+        String codes = lcSub.getData().toLowerCase();
         Matcher m = Pattern.compile("(crl[a-z]{1})").matcher(codes);
         while (m.find()) {
           result.add(m.group());
