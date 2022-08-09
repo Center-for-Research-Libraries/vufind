@@ -1,3 +1,15 @@
+v1.1.0, 2022-08-04
+------------------
+
+This release includes bugfixes and new features.
+
+- Issue #142: NEW FEATURE. Add "Global Resources Programs" (AMP) navigation facet and comprehensive AMP program detection during harvests.
+- Issue #143: Add redirects for DLIR traffic to preserve legacy access to DLIR interfaces in http://catalog-old.crl.edu
+- Issue #146: Remove system maintenance messages from homepage that were falsely shown in certainly circumstances.
+- Issue #147: Fix incorrect "Classification" label for Call Numbers in records lists.
+- Issue #144: Fix broken OKAPI connection issue when FOLIO tokens expire (e.g., after FOLIO upgrades).
+
+
 v1.0.1, 2022-07-07
 ------------------
 
