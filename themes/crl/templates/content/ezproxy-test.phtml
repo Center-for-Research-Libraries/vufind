@@ -1,0 +1,17 @@
+<?php
+$link1 = "http://ddsnext.crl.edu/titles/31799?terms&item_id=422709#?c=4&m=3&s=0&cv=0";
+$link2 = "https://dds.crl.edu/item/10239?test1=1&test2=2";
+?>
+<br/><br/>
+<p>These are a few test cases for EzProxy. We would expect <strong>all</strong> of these links to maintain a proxy prefix, but different character encoding techniques may lead to different results in EZProxy.</p>
+<ol>
+  <li><a href="<?=$this->escapeHtmlAttr($this->proxyUrl($link1))?>" target="_blank">DDSNext Link. Special char hex entity encoded (VuFind Default)</a></li>
+  <li><a href="<?=$this->escapeHtml($this->proxyUrl($link1))?>" target="_blank">DDSNext Link. Special char basic entity encoded</a></li>
+  <li><a href="<?=$this->proxyUrl($link1)?>" target="_blank">DDSNext Link. No special char encoding</a></li>
+  <li><a href="<?=$this->escapeHtmlAttr($this->proxyUrl($link2))?>" target="_blank">DDS Link. Special char hex entity encoded (VuFind Default)</a></li>
+  <li><a href="<?=$this->escapeHtml($this->proxyUrl($link2))?>" target="_blank">DDS Link. Special char basic entity encoded</a></li>
+  <li><a href="<?=$this->proxyUrl($link2)?>" target="_blank">DDS Link. No special char encoding</a></li>
+</ol>
+
+
+
