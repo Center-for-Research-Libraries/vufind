@@ -1,16 +1,33 @@
 <?php
 $link1 = "http://ddsnext.crl.edu/titles/31799?terms&item_id=422709#?c=4&m=3&s=0&cv=0";
-$link2 = "https://dds.crl.edu/item/10239?test1=1&test2=2";
+$link2 = "ddsnext.crl.edu/titles/31799?terms&item_id=422709#?c=4&m=3&s=0&cv=0";
 ?>
 <br/><br/>
 <p>These are a few test cases for EzProxy. We would expect <strong>all</strong> of these links to maintain a proxy prefix, but different character encoding techniques may lead to different results in EZProxy.</p>
 <ol>
-  <li><a href="<?=$this->escapeHtmlAttr($this->proxyUrl($link1))?>" target="_blank">DDSNext Link. Special char hex entity encoded (VuFind Default)</a></li>
-  <li><a href="<?=$this->escapeHtml($this->proxyUrl($link1))?>" target="_blank">DDSNext Link. Special char basic entity encoded</a></li>
-  <li><a href="<?=$this->proxyUrl($link1)?>" target="_blank">DDSNext Link. No special char encoding</a></li>
-  <li><a href="<?=$this->escapeHtmlAttr($this->proxyUrl($link2))?>" target="_blank">DDS Link. Special char hex entity encoded (VuFind Default)</a></li>
-  <li><a href="<?=$this->escapeHtml($this->proxyUrl($link2))?>" target="_blank">DDS Link. Special char basic entity encoded</a></li>
-  <li><a href="<?=$this->proxyUrl($link2)?>" target="_blank">DDS Link. No special char encoding</a></li>
+  <li><strong><a href="<?=$this->escapeHtmlAttr($this->proxyUrl($link1))?>" target="_blank">Link with full character references</a></strong></li>
+  <ul>
+    <li>All non-alphanumeric characters in href attribute use valid character references (e.g. "/" -> "<?=$this->escapeHtmlAttr("&#x2F;")?>", "&" -> "<?=$this->escapeHtmlAttr("&amp;")?>")</li>
+    <li>Used on catalog.crl.edu for external links</li>
+    <li>Valid XHTML</li>
+    <li style="color: red;">EZProxy does <strong>not</strong> decode and process correctly</li>
+  </ul>
+  </ul>
+  <li><strong><a href="<?=$this->escapeHtml($this->proxyUrl($link1))?>" target="_blank">Link with partial character references</a></strong></li>
+  <ul>
+    <li>Only query strings in href attribute use valid character references (e.g. "/" -> "/", "&" -> "<?=$this->escapeHtmlAttr("&amp;")?>")</li>
+    <li>Used on catalog.crl.edu for internal links</li>
+    <li>Valid XHTML</li>
+    <li style="color: green;">EZProxy decodes and processes correctly</li>
+  </ul>
+  <li><strong><a href="<?=$this->proxyUrl($link1)?>" target="_blank">Link with no character references</a></strong></li>
+  <ul>
+    <li>No character references used (e.g. "/" -> "/", "&" -> "&")</li>
+    <li>Not used on catalog.crl.edu</li>
+    <li><strong>Not</strong> valid XHTML</li>
+    <li style="color: green;">EZProxy decodes and processes correctly</li>
+  </ul>
+  <li><strong><a href="http://<?=$this->escapeHtmlAttr($this->proxyUrl($link2))?>" target="_blank">Link with full character references, but not in protocol</a></strong></li>
 </ol>
 
 
