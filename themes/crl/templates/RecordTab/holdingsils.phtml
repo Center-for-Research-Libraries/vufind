@@ -110,7 +110,7 @@
           <?php else: ?>
             <?php if ($row['availability'] ?? false): ?>
               <?php /* Begin Available Items (Holds) */ ?>
-               <span class="text-success"><?=$this->transEsc("Available")?><link property="availability" href="http://schema.org/InStock" /></span>
+              <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>" class="toolbar-btn" data-lightbox=""><span class="text-success"><?=$this->transEsc("Available")?><link property="availability" href="http://schema.org/InStock" /></span></a>
               <?php if ($row['link'] ?? false): ?>
                 <a class="<?=$check ? 'checkRequest ' : ''?>placehold" <?php if (!empty($row['linkLightbox'])): ?>data-lightbox <?php endif; ?>href="<?=$this->escapeHtmlAttr($this->recordLinker()->getRequestUrl($row['link']))?>"><i class="fa fa-flag" aria-hidden="true"></i>&nbsp;<?=$this->transEsc($check ? "Check Hold" : "Place a Hold")?></a>
               <?php endif; ?>
@@ -123,7 +123,7 @@
             <?php else: ?>
               <?php /* Begin Unavailable Items (Recalls) 
                        Note that $row['status'] contains raw status from ILS */ ?>
-              <span class="text-danger"><?=$this->transEsc("Available by Request")?><link property="availability" href="http://schema.org/OutOfStock" /></span>
+              <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>" class="toolbar-btn" data-lightbox=""><span class="text-danger"><?=$this->transEsc("Available by Request")?><link property="availability" href="http://schema.org/OutOfStock" /></span></a>
               <?php if ($row['returnDate'] ?? false): ?>&ndash; <span class="small"><?=$this->escapeHtml($row['returnDate'])?></span><?php endif; ?>
               <?php if ($row['duedate'] ?? false): ?>
                 &ndash; <span class="small"><?=$this->transEsc("Due")?>: <?=$this->escapeHtml($row['duedate'])?></span>
