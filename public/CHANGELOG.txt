@@ -7,6 +7,7 @@ This release includes minor interface and bug fixes.
 - Issue #151: Remove field values from the staff MARC display, such as the 952, that are internal to FOLIO processing and not part of a public bib record.
 - Issue #148: Enable the display of live status information for available items.
 - Issue #154: Make item status values clickable to improve ILL/borrowing experiences.
+- Issue #156: Add Global Resources Program field to resource pages.
 
 
 v1.1.0, 2022-08-04
