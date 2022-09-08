@@ -92,7 +92,8 @@
             'getCRLProgram',
             null,
             ['itemPrefix' => '<span property="program">',
-             'itemSuffix' => '</span>']
+             'itemSuffix' => '</span>',
+             'translate' => TRUE]
         );
         $spec->setTemplateLine(
             'Format',
