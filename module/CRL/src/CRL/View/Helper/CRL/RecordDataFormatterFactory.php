@@ -87,6 +87,14 @@
         $spec->setTemplateLine(
             'Related Items', 'getAllRecordLinks', 'data-allRecordLinks.phtml'
         );
+        $spec->setLine(
+            'Global Resources Program',
+            'getCRLProgram',
+            null,
+            ['itemPrefix' => '<span property="program">',
+             'itemSuffix' => '</span>',
+             'translate' => TRUE]
+        );
         $spec->setTemplateLine(
             'Format',
             'getFormats',

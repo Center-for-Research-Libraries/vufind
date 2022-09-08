@@ -26,6 +26,16 @@ class SolrMarc extends \VuFind\RecordDriver\SolrMarc
     {
         return (array) $this->fields['crl_scope'] ?? [];
     }
+    
+    /**
+     * Get the CRL program of the current record.
+     *
+     * @return array
+     */
+    public function getCRLProgram()
+    {
+        return (array) $this->fields['crl_program'] ?? [];
+    }
 
     /**
      * Check if the record contains the online format.
