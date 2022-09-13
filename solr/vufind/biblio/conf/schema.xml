@@ -132,6 +132,7 @@
    <field name="building" type="string" indexed="true" stored="true" multiValued="true"/>
    <!-- Generic Fields -->
    <field name="language" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="suppressed_str" type="text" indexed="true" stored="true"/>
    <field name="format" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="crl_scope" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="crl_program" type="string" indexed="true" stored="true" multiValued="true"/>
