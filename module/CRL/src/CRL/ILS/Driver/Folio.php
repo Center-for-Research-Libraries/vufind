@@ -101,7 +101,7 @@ class Folio extends \VuFind\ILS\Driver\Folio
                     'reserve' => 'TODO',
                     'addLink' => true,
                     // CRL additions
-                    'volume' => $item->volume,
+                    'volume' => $item->volume ?? '',
                 ];
             }
         }
