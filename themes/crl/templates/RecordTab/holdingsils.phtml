@@ -77,6 +77,11 @@
     <?php if (!empty($holding['items'])): ?>
       <?php $total_items++; ?>
       <h3><?=$this->transEsc("Item List")?></h3>
+      <?php if (count($holding['items']) > 5):?>
+        <p class="alert alert-danger">
+          <?=$this->transEsc('Notice: This list is currently out of chronological order. We appreciate your patience as we work towards improving our holdings data.') ?>
+        </p>
+      <?php endif; ?>
       <table class="table table-striped">
       <th><?=$this->transEsc("Description")?></th>
       <th><?=$this->transEsc("Local Call Number")?></th>
@@ -121,7 +126,7 @@
                 <a class="<?=$checkILLRequest ? 'checkILLRequest ' : ''?>placeILLRequest" data-lightbox href="<?=$this->escapeHtmlAttr($this->recordLinker()->getRequestUrl($row['ILLRequestLink']))?>"><i class="fa fa-flag" aria-hidden="true"></i>&nbsp;<?=$this->transEsc($checkILLRequest ? "ill_request_check_text" : "ill_request_place_text")?></a>
               <?php endif; ?>
             <?php else: ?>
-              <?php /* Begin Unavailable Items (Recalls) 
+              <?php /* Begin Unavailable Items (Recalls)
                        Note that $row['status'] contains raw status from ILS */ ?>
               <a href="<?=$this->url('content-page', ['page' => 'borrowing']) ?>" class="toolbar-btn" data-lightbox=""><span class="text-danger"><?=$this->transEsc("Available by Request")?><link property="availability" href="http://schema.org/OutOfStock" /></span></a>
               <?php if ($row['returnDate'] ?? false): ?>&ndash; <span class="small"><?=$this->escapeHtml($row['returnDate'])?></span><?php endif; ?>
