@@ -78,12 +78,13 @@
       <?php $total_items++; ?>
       <h3><?=$this->transEsc("Item List")?></h3>
       <?php if (count($holding['items']) > 5):?>
-        <p class="alert alert-danger">
+        <p class="alert alert-danger--default">
+          <i class="fa fa-warning"></i>
           <?=$this->transEsc('Notice: This list is currently out of chronological order. We appreciate your patience as we work towards improving our holdings data.') ?>
         </p>
       <?php endif; ?>
       <table class="table table-striped">
-      <th><?=$this->transEsc("Description")?></th>
+      <th><?=$this->transEsc("Description")?><?php if (count($holding['items']) > 5):?><i class="fa fa-warning"></i><?php endif; ?></th>
       <th><?=$this->transEsc("Local Call Number")?></th>
       <th><?=$this->transEsc("Status")?></th>
       <?php
