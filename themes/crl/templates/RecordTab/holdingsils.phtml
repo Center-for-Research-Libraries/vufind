@@ -6,6 +6,7 @@
     $openUrlActive = $openUrl->isActive();
     $doi = $this->doi($this->driver, 'holdings');
     $doiActive = $doi->isActive();
+    // Setting a threshold variable for item list size.
     $longItemList = 5;
     // Account for replace_other_urls setting
     $urls = $this->record($this->driver)->getLinkDetails($openUrlActive);
