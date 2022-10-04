@@ -6,6 +6,7 @@
     $openUrlActive = $openUrl->isActive();
     $doi = $this->doi($this->driver, 'holdings');
     $doiActive = $doi->isActive();
+    $longItemList = 5;
     // Account for replace_other_urls setting
     $urls = $this->record($this->driver)->getLinkDetails($openUrlActive);
     $offlineMode = $this->ils()->getOfflineMode();
@@ -62,11 +63,6 @@
 
 <?php if (!empty($holdings['holdings'])): ?>
   <?php foreach ($holdings['holdings'] ?? [] as $holding): ?>
-
-    <?php
-      $isLongItemList = count($holding['items']) > 5 ? true : false;
-    ?>
-
     <?php if (!empty($holding['textfields'])): ?>
       <?php foreach ($holding['textfields'] ?? [] as $textFieldName => $textFields): ?>
         <h3><?=$textFieldName == 'summary' ? $this->transEsc("Volume Holdings") : $this->transEsc(ucfirst($textFieldName))?></h3>
@@ -80,14 +76,14 @@
     <?php if (!empty($holding['items'])): ?>
       <?php $total_items++; ?>
       <h3><?=$this->transEsc("Item List")?></h3>
-      <?php if ($isLongItemList):?>
+      <?php if (count($holding['items']) > $longItemList):?>
         <p class="alert alert-info">
           <i class="fa fa-info-circle"></i>
           <?=$this->transEsc('Notice: Some item lists may not be in chronological order. We appreciate your patience as CRL refines its holdings metadata to address this and improve discovery and borrowing experiences.') ?>
         </p>
       <?php endif; ?>
       <table class="table table-striped table--holding">
-      <th><?=$this->transEsc("Description")?><?php if ($isLongItemList):?><i class="fa fa-info-circle"></i><?php endif; ?></th>
+      <th><?=$this->transEsc("Description")?><?php if (count($holding['items']) > $longItemList):?><i class="fa fa-info-circle"></i><?php endif; ?></th>
       <th><?=$this->transEsc("Local Call Number")?></th>
       <th><?=$this->transEsc("Status")?></th>
       <?php
