@@ -124,16 +124,16 @@ forms:
     title: Send us your feedback!
     enabled: true
     useCaptcha: true
-    reportReferrer: false
+    reportReferrer: true
     reportUserAgent: true
-    #emailFrom:
-    #  name: Your Library - Site Feedback
-    #recipient:
-    #  name: Your Library
-    #  email: feedback@myuniversity.edu
+    emailFrom:
+      name: Center for Research Libraries - Site Feedback
+    recipient:
+      name: Center for Research Libraries
+      email: websystems@crl.edu
 
     onlyForLoggedUsers: false
-    #emailSubject: VuFind Feedback
+    emailSubject: VuFind Feedback
     response: Thank you for your feedback.
     senderEmailRequired: false
     senderNameRequired: false
@@ -221,5 +221,3 @@ forms:
         options:
           - Yes
           - No
-
-

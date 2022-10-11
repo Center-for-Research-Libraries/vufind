@@ -31,11 +31,7 @@
 				</ul>
 			</nav>
 			<nav aria-label="right-navigation">
-				<ul class="nav navbar-nav navbar-right flip"> <?php if ($this->feedback()->tabEnabled()): ?> <li>
-						<a id="feedbackLink" data-lightbox href="
-									<?=$this->url('feedback-home') ?>">
-							<i class="fa fa-envelope" aria-hidden="true"></i> <?=$this->transEsc("Feedback")?> </a>
-					</li> <?php endif; ?> <?php $cart = $this->cart(); if ($cart->isActive()): ?> <li id="cartSummary">
+				<ul class="nav navbar-nav navbar-right flip"> <?php $cart = $this->cart(); if ($cart->isActive()): ?> <li id="cartSummary">
 						<a id="cartItems" data-lightbox title="
 									<?=$this->transEscAttr('View Book Bag')?>" href="
 									<?=$this->url('cart-home')?>">

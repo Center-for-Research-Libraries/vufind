@@ -119,6 +119,13 @@ JS;
         <?=$this->layout()->content ?>
       </div>
     </div>
+
+    <?php if ($this->feedback()->tabEnabled()): ?>
+      <div class="feedbackLinkContainer">
+        <a id="feedbackLink" data-lightbox href="<?=$this->url('feedback-home') ?>"><?=$this->transEsc("Issues/Feedback")?> </a>
+      </div>
+    <?php endif; ?>
+
     <?=$this->render('footer.phtml')?>
     <!-- MODAL IN CASE WE NEED ONE -->
     <div id="modal" class="modal fade hidden-print" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">

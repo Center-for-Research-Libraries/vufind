@@ -180,3 +180,32 @@ h1 + .title-alt {
     color: #8a211e;
   }
 }
+
+.feedbackLinkContainer {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  transform: rotate(270deg);
+  transform-origin: right bottom;
+}
+
+#feedbackLink {
+  display: block;
+  border: 1px solid @crl-blue-lighten;
+  padding: 10px;
+  color: @white;
+  background-color: @crl-blue-lighten;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:focus {
+    color: @crl-blue-lighten;
+    background-color: @white;
+    text-decoration: none;
+  }
+
+  @media @tablet {
+    padding: 15px;
+  }
+}
