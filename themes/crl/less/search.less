@@ -1,24 +1,9 @@
 // Searchbar style.
-.search {
-  margin-top: 1rem;
-  background-image: url(../images/search.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 3rem 2rem;
-
-  body.template-name-results &,
-  body.template-dir-record & {
-    margin-top: 0;
-    padding: 0;
-    background-image: none;
-  }
-}
-
 .outer-container {
-  body.template-name-results &,
-  body.template-dir-record & {
-    background-color: @brand-primary;
+  background-color: @brand-primary;
+
+  body.template-dir-search.template-name-home & {
+    background-color: @white;
   }
 }
 
