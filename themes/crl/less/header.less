@@ -52,13 +52,22 @@
 }
 
 .secondary-nav {
-  background-color: @brand-primary;
-  margin-bottom: 45px;
-  box-shadow: @crl-box-shadow;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: @white;
+  margin-bottom: 0;
 
-  .navbar-toggle {
-    color: @white;
+
+  body.template-dir-search.template-name-home &,
+  body.template-name-advanced &  {
+    background-color: @brand-primary;
+    margin-bottom: 45px;
+    box-shadow: @crl-box-shadow;
+
+    .navbar-toggle {
+      color: @white;
+    }
   }
+
 
   ul {
     margin-bottom: 0;
@@ -84,8 +93,6 @@
       }
 
       li a {
-        color: @white;
-
         &:hover {
           text-decoration: underline;
         }
@@ -98,21 +105,33 @@
 
     li {
       a {
-        color: @white;
+        color: @brand-primary;
 
         &:hover {
           outline: 0;
-        }
-
-        &:focus,
-        &:hover {
-          color: @crl-blue;
-          background-color: @white;
         }
       }
     }
   }
 }
+
+body.template-dir-search.template-name-home,
+body.template-name-advanced {
+  ul.nav > li > a {
+    color: @white;
+
+    &:hover,
+    &:focus {
+      color: @brand-primary;
+      background-color: @white;
+    }
+  }
+
+  ul.nav > li.open {
+    color: @brand-primary;
+  }
+}
+
 // Undo bootstrap negative margins.
 
 .container > .navbar-header {

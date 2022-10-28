@@ -125,4 +125,24 @@ footer {
   & .crl-social-media a {
     font-weight: normal !important;
   }
+
+  .footer-feedback {
+    display: block;
+    outline: 1px solid white;
+    margin: 20px auto 0 0;
+    padding: 10px 20px;
+    background: transparent;
+    max-width: 200px;
+    text-align: center;
+
+    &:hover {
+      background-color: @white;
+      color: @brand-primary;
+      text-decoration: none;
+    }
+
+    @media @tablet {
+      margin-left: auto;
+    }
+  }
 }

@@ -1,0 +1,17 @@
+<?php $this->headTitle($this->translate('Leave Feedback')); ?>
+
+
+<div class="feedback-container">
+  <h1><?=$this->transEsc('Leave Feedback') ?></h1>
+
+  <hr>
+
+  <?php if ($this->auth()->getManager()->supportsRecovery()): ?>
+    <p>To report metadata errors, please contact:<br/>
+      <strong>Nate Florin,</strong> <a href = "mailto: nflorin@crl.edu">nflorin@crl.edu</a>
+    </p>
+  <?php endif; ?>
+  <p>For suggestions and issues around navigation and user experience, please contact:<br/>
+    <a href = "mailto: websystems@crl.edu">websystems@crl.edu</a>
+  </p>
+</div>
