@@ -80,7 +80,8 @@
       <?php if (count($holding['items']) > $longItemList):?>
         <p class="alert alert-info">
           <i class="fa fa-info-circle"></i>
-          <?=$this->transEsc('Notice: Some item lists may not be in chronological order. We appreciate your patience as CRL addresses this issue.') ?>
+          <?=$this->transEsc('Notice: Some item lists may not be in chronological order. We appreciate your patience as CRL addresses this issue. For more assistance,') ?>
+          <a href="<?=$this->url('content-page', ['page' => 'faq']) ?>"><?=$this->transEsc('click here.') ?></a>
         </p>
       <?php endif; ?>
       <table class="table table-striped table--holding">
