@@ -515,6 +515,11 @@
       "text": "Jefferson Library, Thomas Jefferson Foundation"
     },
     {
+      "value": "https://ill.library.jhu.edu/MSEL/", 
+      "class": "illiadNO",
+      "text": "Johns Hopkins University"
+    },    
+    {
       "value": "https://1457.account.worldcat.org/profile/route/openurl?",
       "class": "illiadYES",
       "text": "Kalamazoo College"
@@ -1005,11 +1010,6 @@
       "text": "University of Saskatchewan"
     },
     {
-      "value": "http://saisill.jhu.edu/",
-      "class": "illiadNO",
-      "text": "Paul H Nitze School of Advanced International Studies at Johns Hopkins University"
-    },
-    {
       "value": "http://www.lib.sfu.ca/borrow/request-materials/ill/request-form",
       "class": "illiadNO",
       "text": "Simon Fraser University"
@@ -1059,6 +1059,11 @@
       "class": "illiadYES",
       "text": "SUNY Geneseo"
     },
+    {
+      "value": "https://swarthmore.cliohosting.com/NewRequest/Create?reqtype=Loan",
+      "class": "illiadNO",
+      "text": "Swarthmore College"
+    },    
     {
       "value": "https://temple.illiad.oclc.org/illiad/paley/logon.html",
       "class": "illiadYES",
@@ -1110,7 +1115,7 @@
       "text": "Trent University"
     },
     {
-      "value": "https://tulane.primo.exlibrisgroup.com/openurl/01TUL_INST/01TUL_INST:Tulane?",
+      "value": "https://library.tulane.edu/services/interlibrary-loan", 
       "class": "illiadYES",
       "text": "Tulane University"
     },
