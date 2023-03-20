@@ -1234,7 +1234,7 @@
       "text": "William & Mary"
     },
     {
-      "value": "https://williams.illiad.oclc.org/illiad/logon.html",
+      "value": " http://ezproxy2.williams.edu/login?url=https://williams.illiad.oclc.org/illiad/illiad.dll",
       "class": "illiadYES",
       "text": "Williams College"
     },
