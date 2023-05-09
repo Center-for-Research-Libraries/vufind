@@ -28,3 +28,5 @@ local/httpd-vufind.conf
 env.bat
 import/*.tmp
 .DS_Store
+module/VuFind/src/VuFind/Connection/Wikipedia.UECompare.php
+module/VuFind/src/VuFind/Connection/Wikipedia.NatLibAustralia.2010.php
