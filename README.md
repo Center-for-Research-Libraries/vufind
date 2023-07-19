@@ -1,3 +1,15 @@
+
+# new development branch 'vf_cat_on_tools_crl_edu'
+### 2023-07-06 : vf_cat_on_tools_crl_edu is for putting a copy of @ryan-jacobs work on our public tools server, in order to have a full working instance for development of changes to [catalog.crl.edu](catalog.crl.edu). 
+
+### DEVNOTE: create and link the issue, about new links to worldcat.org that might prefill their ILL form.
+
+
+
+
+## Below this line is original @ryan-jacobs before 2023-07-06  
+----
+
 [![CI Status](https://github.com/vufind-org/vufind/actions/workflows/ci.yaml/badge.svg?branch=dev)](https://github.com/vufind-org/vufind/actions/workflows/ci.yaml)
 # Center for Research Libraries VuFind®
 
