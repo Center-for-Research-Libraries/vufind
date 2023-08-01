@@ -184,7 +184,7 @@
       "text": "University of California, Berkeley"
     },
     {
-      "value": "https://ucdavis.on.worldcat.org/discovery",
+      "value": "https://search.library.ucdavis.edu/discovery/blankIll?vid=01UCD_INST%3AUCD",
       "class": "illiadNO",
       "text": "University of California, Davis"
     },
@@ -205,7 +205,7 @@
     },
 
     {
-      "value": "http://ucr.worldcat.org/",
+      "value": "https://ucr.primo.exlibrisgroup.com/discovery/blankIll?vid=01CDL_RIV_INST%3AUCR",
       "class": "illiadNO",
       "text": "University of California, Riverside"
     },
