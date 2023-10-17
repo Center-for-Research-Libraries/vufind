@@ -30,3 +30,8 @@ import/*.tmp
 .DS_Store
 module/VuFind/src/VuFind/Connection/Wikipedia.UECompare.php
 module/VuFind/src/VuFind/Connection/Wikipedia.NatLibAustralia.2010.php
+themes/crl/js/data.json.before_iss185.json
+themes/crl/js/issue_185_vufind_repo.zip
+themes/crl/js/issue_185_vufind_repo.txt
+themes/crl/js/data.json.before_iss185.zip
+themes/crl/js/data.json.after_issue_185.select_options.html
