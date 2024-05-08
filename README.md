@@ -87,7 +87,7 @@ php install.php
 Navigate to: http://localhost/vufind/Install/Home.
 
 
-If the installation was successful, you should see an "Auto Configure" screen (pictured below). Some items on the list will be marked “Failed” with “Fix” links next to them. Review each item and follow the prompts.
+If the installation was successful, you should see an "Auto Configure" screen (pictured below). Some items on the list will be marked "Failed" with "Fix" links next to them. Review each item and follow the prompts.
 
 ---
 
