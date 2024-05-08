@@ -287,7 +287,7 @@
       "text": "Dartmouth College"
     },
     {
-      "value": "https://udayton.illiad.oclc.org/illiad/logon.html#illiad",
+      "value": "https://udayton.account.worldcat.org/account",
       "class": "illiadYES",
       "text": "University of Dayton"
     },
@@ -947,7 +947,7 @@
       "text": "Towson University"
     },
     {
-      "value": "https://www.trentu.ca/library/ill",
+      "value": "https://ocul-tu.primo.exlibrisgroup.com/discovery/blankIll?vid=01OCUL_TU%3ATU_DEFAULT",
       "class": "illiadNO",
       "text": "Trent University"
     },
