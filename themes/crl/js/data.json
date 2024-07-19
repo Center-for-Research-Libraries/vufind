@@ -586,7 +586,7 @@
       "text": "University of Miami"
     },
     {
-      "value": "http://interlib.lib.msu.edu/lending/lendinglogon.html",
+      "value": "https://interlib.lib.msu.edu",
       "class": "illiadYES",
       "text": "Michigan State University"
     },
@@ -1092,3 +1092,4 @@
     }
   ]
 }
+
