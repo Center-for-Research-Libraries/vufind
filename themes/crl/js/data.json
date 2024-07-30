@@ -302,11 +302,6 @@
       "text": "University of Denver"
     },
     {
-      "value": "https://depaullib.illiad.oclc.org/illiad/logon.html",
-      "class": "illiadYES",
-      "text": "DePaul University"
-    },
-    {
       "value": "https://shib.oit.duke.edu/idp/authn/external?conversation=e1s1",
       "class": "illiadNO",
       "text": "Duke University"
