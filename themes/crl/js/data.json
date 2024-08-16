@@ -11,12 +11,6 @@
       "text": "Adler University"
     },
     {
-      "value": "https://uakron.illiad.oclc.org/illiad/AKR/logon.html",
-      "class": "illiadYES",
-      "text": "University of Akron"
-    },
-    
-    {
       "value": "https://uablh.illiad.oclc.org/illiad/logon.html",
       "class": "illiadYES",
       "text": "University of Alabama at Birmingham"
@@ -46,7 +40,6 @@
       "class": "illiadYES",
       "text": "University of Arkansas"
     },
-
     {
       "value": "http://forms.saic.edu/flaxmanlibrary/interlibrary-loan-request-a-book/",
       "class": "illiadNO",
@@ -62,7 +55,6 @@
       "class": "illiadNO",
       "text": "Ball State University"
     },
-
     {
       "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=BA&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
       "class": "illiadNO",
@@ -78,7 +70,6 @@
       "class": "illiadNO",
       "text": "University of Baltimore Law Library"
     },
-
     {
       "value": "https://bard.illiad.oclc.org/illiad/logon.html",
       "class": "illiadYES",
@@ -98,11 +89,6 @@
       "value": "https://illiad.baylor.edu/illiad/logon.html",
       "class": "illiadYES",
       "text": "Baylor University"
-    },
-    {
-      "value": "https://illiad.lib.binghamton.edu/illiad/",
-      "class": "illiadYES",
-      "text": "Binghamton University"
     },
     {
       "value": "https://illiad.bc.edu/illiad/bxm/logon.html",
@@ -165,11 +151,6 @@
       "text": "University of California, San Diego"
     },
     {
-      "value": "https://ucsf.worldcat.org/",
-      "class": "illiadNO",
-      "text": "University of California, San Francisco"
-    },
-    {
       "value": "https://www.library.ucsb.edu/search-research/citation-linker",
       "class": "illiadNO",
       "text": "University of California, Santa Barbara"
@@ -230,11 +211,6 @@
       "text": "Colgate University"
     },
     {
-      "value": "https://csi.illiad.oclc.org/illiad/logon.html",
-      "class": "illiadYES",
-      "text": "College of Staten Island - CUNY"
-    },
-    {
       "value": "https://coloradocollege.illiad.oclc.org/illiad/logon.html",
       "class": "illiadYES",
       "text": "Colorado College"
@@ -243,11 +219,6 @@
       "value": "https://colorado.idm.oclc.org/login?url=https://colorado.illiad.oclc.org/illiad/COD/illiad.dll",
       "class": "illiadYES",
       "text": "University of Colorado"
-    },
-    {
-      "value": "https://colum.illiad.oclc.org/illiad/logon.html",
-      "class": "illiadYES",
-      "text": "Columbia College Chicago"
     },
     {
       "value": "https://library.columbia.edu/services/request/ill.html",
@@ -274,13 +245,11 @@
       "class": "illiadYES",
       "text": "Cornell University"
     },
-
     {
       "value": "https://illiad.davidson.edu/logon.html",
       "class": "illiadYES",
       "text": "Davidson College"
     },
-
     {
       "value": "https://dartmouth.illiad.oclc.org/illiad/berry/logon.html",
       "class": "illiadYES",
@@ -412,11 +381,6 @@
       "text": "University of Iowa"
     },
     {
-      "value": "https://www.monticello.org/site/research-and-collections/interlibrary-loan-request-form",
-      "class": "illiadNO",
-      "text": "Jefferson Library, Thomas Jefferson Foundation"
-    },
-    {
       "value": "https://ill.library.jhu.edu/", 
       "class": "illiadNO",
       "text": "Johns Hopkins University"
@@ -430,11 +394,6 @@
       "value": "https://illiad.lib.ku.edu/ILLiad/KKU/",
       "class": "illiadYES",
       "text": "University of Kansas"
-    },
-    {
-      "value": "https://kent.illiad.oclc.org/illiad/logon.html",
-      "class": "illiadYES",
-      "text": "Kent State University"
     },
     {
       "value": "https://lib.uky.edu/wtyill/",
@@ -472,11 +431,6 @@
       "text": "Lakehead University"
     },
     {
-      "value": "https://fr.crepuq.vdxhost.com/zportal/zengine?VDXaction=LoginPage",
-      "class": "illiadNO",
-      "text": "Universite Laval"
-    },
-    {
       "value": "https://www.liberty.edu/library/interlibrary-loan-account/",
       "class": "illiadYES",
       "text": "Liberty University"
@@ -486,7 +440,6 @@
       "class": "illiadYES",
       "text": "Loyola University of Chicago"
     },
-
     {
       "value": "https://loyola-illiad-oclc-org.proxy-ln.researchport.umd.edu/illiad/illiad.dll",
       "class": "illiadNO",
@@ -503,12 +456,6 @@
       "class": "illiadNO",
       "text": "University of Manitoba"
     },
-    {
-      "value": "http://libguides.marquette.edu/ill",
-      "class": "illiadYES",
-      "text": "Marquette University"
-    },
-
     {
       "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=BC&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
       "class": "illiadNO",
@@ -544,7 +491,6 @@
       "class": "illiadNO",
       "text": "University of Maryland Law Library"
     },
-
     {
       "value": "https://illiad.library.umass.edu/illiad/AMH/",
       "class": "illiadYES",
@@ -606,11 +552,6 @@
       "text": "University of Missouri-Columbia"
     },
     {
-      "value": "https://monm.illiad.oclc.org/illiad/logon.html",
-      "class": "illiadYES",
-      "text": "Monmouth College"
-    },
-    {
       "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=MS&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
       "class": "illiadNO",
       "text": "Morgan State University"
@@ -670,11 +611,6 @@
       "text": "University of North Carolina at Chapel Hill"
     },
     {
-      "value": "https://623.account.worldcat.org/account",
-      "class": "illiadYES",
-      "text": "University of North Florida"
-    },
-    {
       "value": "https://unt.illiad.oclc.org/illiad/logon.html",
       "class": "illiadYES",
       "text": "University of North Texas"
@@ -699,26 +635,16 @@
       "class": "illiadYES",
       "text": "Norwich University"
     },
-
-
-    {
-      "value": "https://illiad.crl.edu/",
-      "class": "illiadYES",
-      "text": "Non-Member"
-    },
-
     {
       "value": "https://nd.illiad.oclc.org/illiad/IND/illiad.dll",
       "class": "illiadYES",
       "text": "University of Notre Dame"
     },
-
     {
       "value": "https://loyola-illiad-oclc-org.proxy-ln.researchport.umd.edu/illiad/illiad.dll",
       "class": "illiadNO",
       "text": "Notre Dame of Maryland University"
     },
-
     {
       "value": "https://login.ezproxy.oberlin.edu/login?qurl=http%3ahttp%3a%2f%2filliad.oberlin.edu%2filliad%2flogon.html",
       "class": "illiadYES",
@@ -729,13 +655,11 @@
       "class": "illiadYES",
       "text": "Occidental College"
     },
-
     {
       "value": "https://library.osu.edu/ill/borrowing",
       "class": "illiadYES",
       "text": "Ohio State University"
     },
-
     {
       "value": "https://ohio.hosts.atlas-sys.com/illiad/",
       "class": "illiadYES",
@@ -775,11 +699,6 @@
       "value": "https://weblogin.pennkey.upenn.edu/login?factors=UPENN.EDU&cosign-library-accountsvcs-0&https://dla.library.upenn.edu/ils/resourcesharing/",
       "class": "illiadNO",
       "text": "University of Pennsylvania"
-    },
-    {
-      "value": "https://366.account.worldcat.org/profile/route/openurl?",
-      "class": "illiadYES",
-      "text": "Pepperdine University"
     },
     {
       "value": "https://pitt.idm.oclc.org/login?url=https://pitt.illiad.oclc.org/illiad/illiad.dll",
@@ -875,11 +794,6 @@
       "value": "https://sul-illiad.stanford.edu/illiad/ST2/lending/lendinglogon.html",
       "class": "illiadYES",
       "text": "Stanford University"
-    },
-    {
-      "value": "https://sso.cc.stonybrook.edu/cas/login?service=https%3A%2F%2Fsso.cc.stonybrook.edu%2Fidp%2FAuthn%2FRemoteUser",
-      "class": "illiadYES",
-      "text": "Stony Brook University"
     },
     {
       "value": "https://illiad.geneseo.edu/",
@@ -1017,24 +931,10 @@
       "text": "University of Washington"
     },
     {
-      "value": "https://wayne.illiad.oclc.org/illiad/illiad.dll",
-      "class": "illiadYES",
-      "text": "Wayne State University"
-    },
-
-
-    {
       "value": "https://wesleyan.hosts.atlas-sys.com/logon",
       "class": "illiadYES",
       "text": "Wesleyan University"
     },
-
-    {
-      "value": "https://illiad.wcupa.edu/illiad/",
-      "class": "illiadYES",
-      "text": "West Chester University"
-    },
-
     {
       "value": "https://uwf.illiad.oclc.org/illiad/ill_new.htm",
       "class": "illiadYES",
