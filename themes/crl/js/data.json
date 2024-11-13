@@ -96,6 +96,11 @@
       "text": "Boston College"
     },
     {
+      "value": "https://illiad.bowdoin.edu/",
+      "class": "illiadYES",
+      "text": "Bowdoin College"
+    },    
+    {
       "value": "https://search.library.brandeis.edu/discovery/login?vid=01BRAND_INST:BRAND",
       "class": "illiadNO",
       "text": "Brandeis University"
