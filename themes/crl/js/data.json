@@ -16,6 +16,11 @@
       "text": "University of Alabama at Birmingham"
     },
     {
+      "value": "https://ua.illiad.oclc.org/illiad/illiad.dll",
+      "class": "illiadYES",
+      "text": "University of Alabama at Tuscaloosa"
+    },
+    {
       "value": "https://www.library.ualberta.ca/services/interlibrary-loan",
       "class": "illiadNO",
       "text": "University of Alberta"
