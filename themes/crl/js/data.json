@@ -16,6 +16,11 @@
       "text": "University of Alabama at Birmingham"
     },
     {
+      "value": "https://ua.illiad.oclc.org/illiad/illiad.dll",
+      "class": "illiadYES",
+      "text": "University of Alabama at Tuscaloosa"
+    },
+    {
       "value": "https://www.library.ualberta.ca/services/interlibrary-loan",
       "class": "illiadNO",
       "text": "University of Alberta"
@@ -71,7 +76,7 @@
       "text": "University of Baltimore Law Library"
     },
     {
-      "value": "https://bard.illiad.oclc.org/illiad/logon.html",
+      "value": "https://bard.illiad.oclc.org/illiad",
       "class": "illiadYES",
       "text": "Bard College"
     },
@@ -95,6 +100,11 @@
       "class": "illiadYES",
       "text": "Boston College"
     },
+    {
+      "value": "https://illiad.bowdoin.edu/",
+      "class": "illiadYES",
+      "text": "Bowdoin College"
+    },    
     {
       "value": "https://search.library.brandeis.edu/discovery/login?vid=01BRAND_INST:BRAND",
       "class": "illiadNO",
