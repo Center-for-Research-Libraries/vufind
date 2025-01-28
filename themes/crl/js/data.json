@@ -11,14 +11,9 @@
       "text": "Adler University"
     },
     {
-      "value": "https://uablh.illiad.oclc.org/illiad/logon.html",
-      "class": "illiadYES",
-      "text": "University of Alabama at Birmingham"
-    },
-    {
       "value": "https://ua.illiad.oclc.org/illiad/illiad.dll",
       "class": "illiadYES",
-      "text": "University of Alabama at Tuscaloosa"
+      "text": "The University of Alabama"
     },
     {
       "value": "https://www.library.ualberta.ca/services/interlibrary-loan",
