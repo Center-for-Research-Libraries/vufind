@@ -231,11 +231,6 @@
       "text": "Columbia University"
     },
     {
-      "value": "https://library.concordia.ca/find/interlibrary-loans/?guid=request",
-      "class": "illiadNO",
-      "text": "Concordia University"
-    },
-    {
       "value": "https://uconn.illiad.oclc.org/illiad/logon.html",
       "class": "illiadYES",
       "text": "University of Connecticut"
