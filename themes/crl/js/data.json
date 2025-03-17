@@ -11,14 +11,9 @@
       "text": "Adler University"
     },
     {
-      "value": "https://uablh.illiad.oclc.org/illiad/logon.html",
-      "class": "illiadYES",
-      "text": "University of Alabama at Birmingham"
-    },
-    {
       "value": "https://ua.illiad.oclc.org/illiad/illiad.dll",
       "class": "illiadYES",
-      "text": "University of Alabama at Tuscaloosa"
+      "text": "The University of Alabama"
     },
     {
       "value": "https://www.library.ualberta.ca/services/interlibrary-loan",
@@ -234,11 +229,6 @@
       "value": "https://library.columbia.edu/services/request/ill.html",
       "class": "illiadYES",
       "text": "Columbia University"
-    },
-    {
-      "value": "https://library.concordia.ca/find/interlibrary-loans/?guid=request",
-      "class": "illiadNO",
-      "text": "Concordia University"
     },
     {
       "value": "https://uconn.illiad.oclc.org/illiad/logon.html",
@@ -746,6 +736,11 @@
       "text": "Rutgers, The State University of New Jersey"
     },
     {
+      "value": "https://www.slu.edu/library/services/interlibrary-loan.php",
+      "class": "illiadNO",
+      "text": "Saint Louis University"
+    },
+    {
       "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=SM&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
       "class": "illiadNO",
       "text": "St. Mary's College of Maryland"
@@ -826,7 +821,7 @@
       "text": "University of Tennessee"
     },
     {
-      "value": "http://getitforme.library.tamu.edu/MSLLocal/lending/LendingLogon.html",
+      "value": "https://getitforme.library.tamu.edu/illiadlocal/",
       "class": "illiadYES",
       "text": "Texas A & M University"
     },
