@@ -736,6 +736,11 @@
       "text": "Rutgers, The State University of New Jersey"
     },
     {
+      "value": "https://www.slu.edu/library/services/interlibrary-loan.php",
+      "class": "illiadNO",
+      "text": "Saint Louis University"
+    },
+    {
       "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=SM&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
       "class": "illiadNO",
       "text": "St. Mary's College of Maryland"
