@@ -81,11 +81,6 @@
       "text": "Baruch College - CUNY"
     },
     {
-      "value": "https://illiad.bates.edu/illiad/",
-      "class": "illiadYES",
-      "text": "Bates College"
-    },
-    {
       "value": "https://illiad.baylor.edu/illiad/logon.html",
       "class": "illiadYES",
       "text": "Baylor University"
@@ -184,11 +179,6 @@
       "value": "https://carthage.illiad.oclc.org/illiad/",
       "class": "illiadYES",
       "text": "Carthage College"
-    },
-    {
-      "value": "https://ucf-flvc.primo.exlibrisgroup.com/discovery/login?vid=01FALSC_UCF:UCF",
-      "class": "illiadYES",
-      "text": "University of Central Florida"
     },
     {
       "value": "http://library.csu.edu/ill/bookloanrequest.php",
@@ -445,7 +435,6 @@
       "class": "illiadNO",
       "text": "Loyola University Maryland"
     },
-
     {
       "value": "https://macalester.illiad.oclc.org/illiad/logon.html",
       "class": "illiadYES",
@@ -502,11 +491,6 @@
       "text": "University of Massachusetts-Boston"
     },
     {
-      "value": "https://login.ezproxy.mpib-berlin.mpg.de/login?url=http://intra.mpib-berlin.mpg.de/en/i/service-departments/library",
-      "class": "illiadNO",
-      "text": "Max Planck Institute for Human Development"
-    },
-    {
       "value": "https://www.mcgill.ca/library/services/otherloans/interlibrary",
       "class": "illiadNO",
       "text": "McGill University"
@@ -555,10 +539,6 @@
       "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=MS&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
       "class": "illiadNO",
       "text": "Morgan State University"
-    },
-    {
-      "value": "https://caul-cbua.relais-host.com/user/login.html?group=patron&LS=NBSAM",
-      "text": "Mount Allison University"
     },
     {
       "value": "https://proxy.mtholyoke.edu:2443/login?url=https://mtholyoke.illiad.oclc.org/illiad/illiad.dll",
