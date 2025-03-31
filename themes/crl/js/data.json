@@ -776,6 +776,11 @@
       "text": "University of Southern California"
     },
     {
+      "value": https://staatsbibliothek-berlin.de/en/service/document-delivery-interlibrary-loan/interlibrary-loan-from-the-staatsbibliothek",
+      "class": "illiadNO",
+      "text": "Staatsbibliothek zu Berlin"
+    },
+    {
       "value": "https://sul-illiad.stanford.edu/illiad/ST2/lending/lendinglogon.html",
       "class": "illiadYES",
       "text": "Stanford University"
