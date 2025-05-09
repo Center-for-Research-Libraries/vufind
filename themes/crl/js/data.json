@@ -361,7 +361,7 @@
       "text": "Indiana University"
     },
     {
-      "value": "http://www.lib.iastate.edu/info/6961",
+      "value": "https://www.lib.iastate.edu/find-borrow-request/request-items/items-another-library-interlibrary-loan",
       "class": "illiadYES",
       "text": "Iowa State University"
     },
@@ -391,7 +391,7 @@
       "text": "University of Kentucky"
     },
     {
-      "value": "https://kenyon.illiad.oclc.org/illiad/logon.html",
+      "value": "http://tipasa.kenyon.edu/",
       "class": "illiadYES",
       "text": "Kenyon College"
     },
@@ -774,6 +774,11 @@
       "value": "http://libproxy2.usc.edu/login?url=http://usc.illiad.oclc.org/illiad/illiad.dll",
       "class": "illiadYES",
       "text": "University of Southern California"
+    },
+    {
+      "value": "https://staatsbibliothek-berlin.de/en/service/document-delivery-interlibrary-loan/interlibrary-loan-from-the-staatsbibliothek",
+      "class": "illiadNO",
+      "text": "Staatsbibliothek zu Berlin"
     },
     {
       "value": "https://sul-illiad.stanford.edu/illiad/ST2/lending/lendinglogon.html",
