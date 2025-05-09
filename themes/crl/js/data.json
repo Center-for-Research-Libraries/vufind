@@ -361,7 +361,7 @@
       "text": "Indiana University"
     },
     {
-      "value": "http://www.lib.iastate.edu/info/6961",
+      "value": "https://www.lib.iastate.edu/find-borrow-request/request-items/items-another-library-interlibrary-loan",
       "class": "illiadYES",
       "text": "Iowa State University"
     },
@@ -776,7 +776,7 @@
       "text": "University of Southern California"
     },
     {
-      "value": https://staatsbibliothek-berlin.de/en/service/document-delivery-interlibrary-loan/interlibrary-loan-from-the-staatsbibliothek",
+      "value": "https://staatsbibliothek-berlin.de/en/service/document-delivery-interlibrary-loan/interlibrary-loan-from-the-staatsbibliothek",
       "class": "illiadNO",
       "text": "Staatsbibliothek zu Berlin"
     },
