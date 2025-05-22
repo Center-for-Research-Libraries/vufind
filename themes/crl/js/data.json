@@ -901,7 +901,7 @@
       "text": "Virginia Commonwealth University"
     },
     {
-      "value": "https://login.vt.edu/profile/SAML2/Redirect/SSO;jsessionid=16ugbtza26i381tj4we6exfuam?execution=e1s1",
+      "value": "https://vt.hosts.atlas-sys.com/logon",
       "class": "illiadYES",
       "text": "Virginia Tech"
     },
