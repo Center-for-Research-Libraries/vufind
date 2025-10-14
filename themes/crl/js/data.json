@@ -441,37 +441,37 @@
       "text": "University of Manitoba"
     },
     {
-      "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=BC&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
+      "value": "https://shib.idm.umd.edu/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e1s1",
       "class": "illiadNO",
       "text": "University of Maryland, Baltimore County (UMBC)"
     },
     {
-      "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=CE&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
+      "value": "https://shib.idm.umd.edu/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e1s1",
       "class": "illiadNO",
       "text": "University of Maryland, Center for Environmental Science"
     },
     {
-      "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=CP&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
+      "value": "https://shib.idm.umd.edu/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e1s1",
       "class": "illiadNO",
       "text": "University of Maryland, College Park"
     },
     {
-      "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=ES&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
+      "value": "https://shib.idm.umd.edu/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e1s1",
       "class": "illiadNO",
       "text": "University of Maryland, Eastern Shore"
     },
     {
-      "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=UC&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
+      "value": "https://shib.idm.umd.edu/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e1s1",
       "class": "illiadNO",
       "text": "University of Maryland Global Campus (UMGC)"
     },
     {
-      "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=HS&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
+      "value": "https://shib.idm.umd.edu/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e1s1",
       "class": "illiadNO",
       "text": "University of Maryland Health Sciences and Human Services Library"
     },
     {
-      "value": "https://pds.lib.umd.edu/pds?func=load-login&institute=ML&calling_system=aleph&url=https://catalog.umd.edu/F?func=",
+      "value": "https://shib.idm.umd.edu/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e1s1",
       "class": "illiadNO",
       "text": "University of Maryland Law Library"
     },
